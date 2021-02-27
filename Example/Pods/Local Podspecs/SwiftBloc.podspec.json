@@ -1,0 +1,22 @@
+{
+  "name": "SwiftBloc",
+  "version": "0.1.0",
+  "summary": "A short description of SwiftBloc.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/v.kachalov/SwiftBloc",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "v.kachalov": "v.kachalov@thalia.de"
+  },
+  "source": {
+    "git": "https://github.com/v.kachalov/SwiftBloc.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "9.0"
+  },
+  "source_files": "SwiftBloc/Classes/**/*"
+}
