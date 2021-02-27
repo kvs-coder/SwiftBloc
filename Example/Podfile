@@ -1,0 +1,13 @@
+use_frameworks!
+
+platform :ios, '9.0'
+
+target 'SwiftBloc_Example' do
+  pod 'SwiftBloc', :path => '../'
+
+  target 'SwiftBloc_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
