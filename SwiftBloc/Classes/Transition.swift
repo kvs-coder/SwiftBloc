@@ -7,7 +7,7 @@
 
 import Foundation
 
-class Transition<Event, State>: Change<State> {
+public class Transition<Event, State>: Change<State> {
     let event: Event
     
     init(
@@ -20,7 +20,7 @@ class Transition<Event, State>: Change<State> {
     }
 }
 
-extension Transition where State: Equatable, Event: Equatable {
+public extension Transition where State: Equatable, Event: Equatable {
     static func == (lhs: Transition<Event, State>, rhs: Transition<Event, State>) -> Bool {
         lhs.currentState == rhs.currentState && lhs.nextState == rhs.nextState && lhs.event == rhs.event
     }

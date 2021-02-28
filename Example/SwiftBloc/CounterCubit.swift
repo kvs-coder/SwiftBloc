@@ -11,13 +11,14 @@ import SwiftBloc
 
 class CounterCubit: Cubit<Int> {
     init() {
-        super.init(state: 0, onCompletion: { (completed) in
-            print("Completed")
-        }) { (newValue) in
+        super.init(state: 0)
+        listen(onCompletion: { (completed) in
+            print("Completed: \(completed)")
+        }, onValue: { (newValue) in
             print("new value: \(newValue)")
-        }
+        })
     }
-    
+
     func increment() {
         emit(state: state + 1)
     }

@@ -14,25 +14,21 @@ struct CubitUnhandledError: Error {
 
 open class Cubit<State> where State: Equatable {
     private var _state: State
-    private var emitted = false
+
     private let subject = PassthroughSubject<State, Never>()
-    private var subscriber: AnyCancellable?
+
+    var subscriber: AnyCancellable?
+    var emitted = false
     
     public var state: State {
         return _state
     }
     
-    private var observer: BlocObserver {
-        return Bloc.observer
-    }
+    public var observer: BlocObserver?
     
-    public init(state: State, onCompletion: @escaping (Subscribers.Completion<Never>) -> Void, onValue: @escaping (State) -> Void) {
+    public init(state: State) {
         self._state = state
-        observer.onCreate(cubit: self)
-        subscriber = subject.sink(
-            receiveCompletion: onCompletion,
-            receiveValue: onValue
-        )
+        observer?.onCreate(cubit: self)
     }
     
     public func emit(state: State) {
@@ -45,20 +41,26 @@ open class Cubit<State> where State: Equatable {
         emitted = true
     }
     
-    func addError(error: Any) {
-        onError(error: error)
+    public func listen(
+        onCompletion: @escaping (Subscribers.Completion<Never>) -> Void,
+        onValue: @escaping (State) -> Void
+    ) {
+        subscriber = subject.sink(
+            receiveCompletion: onCompletion,
+            receiveValue: onValue
+        )
+    }
+
+    open func onError(error: Error) {
+        observer?.onError(cubit: self, error: error)
     }
     
-    func onError(error: Any) {
-        observer.onError(cubit: self, error: error)
-    }
-    
-    func onChange(change: Change<State>) {
-        observer.onChange(cubit: self, change: change)
+    open func onChange(change: Change<State>) {
+        observer?.onChange(cubit: self, change: change)
     }
     
     public func close() {
-        observer.onClose(cubit: self)
+        observer?.onClose(cubit: self)
         subscriber?.cancel()
     }
 }

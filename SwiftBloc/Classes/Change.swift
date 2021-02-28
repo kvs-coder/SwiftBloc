@@ -7,7 +7,7 @@
 
 import Foundation
 
-class Change<State> {
+public class Change<State> {
     let currentState: State
     
     let nextState: State
@@ -24,7 +24,7 @@ class Change<State> {
 }
 // MARK: - Equatable
 extension Change: Equatable where State: Equatable {
-    static func == (lhs: Change<State>, rhs: Change<State>) -> Bool {
+    public static func == (lhs: Change<State>, rhs: Change<State>) -> Bool {
         lhs.currentState == rhs.currentState && lhs.nextState == rhs.nextState
     }
 }
