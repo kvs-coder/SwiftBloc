@@ -1,14 +1,15 @@
+//
+//  Cubit.swift
+//  Pods-SwiftBloc_Example
+//
+//  Created by Kachalov, Victor on 27.02.21.
+//
+
 import Combine
 
 struct CubitUnhandledError: Error {
-    let error: Any
-    
     var localizedDescription: String {
-        return "Unhandled error occurred: \(error)"
-    }
-    
-    init(error: Any) {
-        self.error = error
+        return "Unhandled error occurred: \(self)"
     }
 }
 

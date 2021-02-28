@@ -5,7 +5,6 @@
 //  Created by Kachalov, Victor on 27.02.21.
 //
 
-import Foundation
 import Combine
 
 open class Bloc<Event, State>: Cubit<State> where State: Equatable, Event: Equatable {
@@ -35,7 +34,7 @@ open class Bloc<Event, State>: Cubit<State> where State: Equatable, Event: Equat
     
     private func bindEventsToStates() {
         subscriber = subject
-            .compactMap ({ [unowned self] (event) -> Transition<Event, State> in
+            .map ({ [unowned self] (event) -> Transition<Event, State> in
                 let nextState = self.mapEventToState(event: event)
                 return Transition(
                     currentState: self.state,

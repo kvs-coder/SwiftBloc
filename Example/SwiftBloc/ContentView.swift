@@ -15,26 +15,31 @@ struct ContentView: View {
     private let bloc = CounterBloc()
 
     var body: some View {
-        VStack {
-            Button(action: {
-                //self.cubit.increment()
-                self.bloc.add(event: .increment)
-                print("increment:", self.bloc.state.state)
-            }, label: {
-                Text("Increment")
-            })
-            Button(action: {
-                //self.cubit.increment()
-                self.bloc.add(event: .decrement)
-                print("decrement:", self.bloc.state.state)
-            }, label: {
-                Text("Decrement")
-            })
-            Button(action: {
-                //self.cubit.close()
-            }, label: {
-                Text("Cancel")
-            })
+        BlocBuilder(builder: { state in
+            return VStack {
+                Button(action: {
+                    //self.cubit.increment()
+                    self.bloc.add(event: .increment)
+                    print("increment:", self.bloc.state.state)
+                }, label: {
+                    Text("Increment")
+                })
+                Button(action: {
+                    //self.cubit.increment()
+                    self.bloc.add(event: .decrement)
+                    print("decrement:", self.bloc.state.state)
+                }, label: {
+                    Text("Decrement")
+                })
+                Button(action: {
+                    //self.cubit.close()
+                    self.bloc.close()
+                }, label: {
+                    Text("Cancel")
+                })
+            }
+        }, cubit: bloc) { (previous, current) -> Bool in
+            return previous == current
         }
     }
 }
