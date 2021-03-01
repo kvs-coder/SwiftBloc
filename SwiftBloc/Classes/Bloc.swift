@@ -33,22 +33,22 @@ open class Bloc<Event, State>: Cubit<State> where State: Equatable, Event: Equat
     }
     
     private func bindEventsToStates() {
-        subscriber = subject
-            .map ({ [unowned self] (event) -> Transition<Event, State> in
-                let nextState = self.mapEventToState(event: event)
-                return Transition(
-                    currentState: self.state,
-                    event: event,
-                    nextState: nextState
-                )
-            })
-            .sink(receiveValue: { [unowned self] (transition) in
-                if transition.nextState == self.state && self.emitted {
-                    return
-                }
-                self.onTransition(transition: transition)
-                self.emit(state: transition.nextState)
-                self.emitted = true
-            })
+//        subscriber = subject
+//            .map ({ [unowned self] (event) -> Transition<Event, State> in
+//                let nextState = self.mapEventToState(event: event)
+//                return Transition(
+//                    currentState: self.state,
+//                    event: event,
+//                    nextState: nextState
+//                )
+//            })
+//            .sink(receiveValue: { [unowned self] (transition) in
+//                if transition.nextState == self.state && self.emitted {
+//                    return
+//                }
+//                self.onTransition(transition: transition)
+//                self.emit(state: transition.nextState)
+//                self.emitted = true
+//            })
     }
 }

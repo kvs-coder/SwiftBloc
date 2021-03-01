@@ -11,36 +11,16 @@ import SwiftBloc
 import SwiftUI
 
 struct ContentView: View {
-    private let cubit = CounterCubit()
-    private let bloc = CounterBloc()
+    @ObservedObject var cubit = CounterCubit()
+    //@State private var bloc = CounterBloc()
 
     var body: some View {
-        BlocBuilder(builder: { state in
-            return VStack {
-                Button(action: {
-                    //self.cubit.increment()
-                    self.bloc.add(event: .increment)
-                    print("increment:", self.bloc.state.state)
-                }, label: {
-                    Text("Increment")
-                })
-                Button(action: {
-                    //self.cubit.increment()
-                    self.bloc.add(event: .decrement)
-                    print("decrement:", self.bloc.state.state)
-                }, label: {
-                    Text("Decrement")
-                })
-                Button(action: {
-                    //self.cubit.close()
-                    self.bloc.close()
-                }, label: {
-                    Text("Cancel")
-                })
-            }
-        }, cubit: bloc) { (previous, current) -> Bool in
-            return previous == current
+        VStack {
+            Button(action: {
+                self.cubit.increment()
+            }, label: { Text("\(cubit.state)") })
         }
+        //TestView()
     }
 }
 
