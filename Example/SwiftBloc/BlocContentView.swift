@@ -7,24 +7,59 @@
 //
 
 import SwiftUI
+import SwiftBloc
 
 struct BlocContentView: View {
     @ObservedObject var bloc = CounterBloc()
 
     var body: some View {
-        VStack {
-            Button(action: {
-                self.bloc.add(event: .increment)
-            }, label: {
-                Text("Send Increment event")
-            })
-            Button(action: {
-                self.bloc.add(event: .decrement)
-            }, label: {
-                Text("Send Decrement event")
-            })
-            Text("Count: \(bloc.state.count)")
-        }
+        BlocBuilder(builder: { (state) in
+            VStack {
+                if state.count > 5 {
+                    VStack {
+                        Text("Hooora")
+                        Button(action: {
+                            self.bloc.add(event: .decrement)
+                            self.bloc.add(event: .decrement)
+                            self.bloc.add(event: .decrement)
+                            self.bloc.add(event: .decrement)
+                            self.bloc.add(event: .decrement)
+                        }, label: {
+                            Text("Reset")
+                        })
+                    }
+                } else {
+                    VStack {
+                        Button(action: {
+                            self.bloc.add(event: .increment)
+                        }, label: {
+                            Text("Send Increment event")
+                        })
+                        Button(action: {
+                            self.bloc.add(event: .decrement)
+                        }, label: {
+                            Text("Send Decrement event")
+                        })
+                        Text("Count: \(state.count)")
+                    }
+                }
+            }
+        }, cubit: bloc, buildWhen: { (prev, cur) -> Bool in
+            return prev == cur
+        })
+//        VStack {
+//            Button(action: {
+//                self.bloc.add(event: .increment)
+//            }, label: {
+//                Text("Send Increment event")
+//            })
+//            Button(action: {
+//                self.bloc.add(event: .decrement)
+//            }, label: {
+//                Text("Send Decrement event")
+//            })
+//            Text("Count: \(bloc.state.count)")
+//        }
     }
 }
 
