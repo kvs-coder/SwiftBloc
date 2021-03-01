@@ -6,25 +6,30 @@
 //  Copyright (c) 2021 v.kachalov. All rights reserved.
 //
 
-import UIKit
 import SwiftBloc
 import SwiftUI
 
 struct CubitContentView: View {
     @ObservedObject var cubit = CounterCubit()
-    //@State private var bloc = CounterBloc()
 
     var body: some View {
         VStack {
             Button(action: {
                 self.cubit.increment()
-            }, label: { Text("\(cubit.state)") })
+            }, label: {
+                Text("Increment")
+            })
+            Button(action: {
+                self.cubit.decrement()
+            }, label: {
+                Text("Decrement")
+            })
+            Text("Count: \(cubit.state)")
         }
-        //TestView()
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
+struct CubitContentView_Previews: PreviewProvider {
     static var previews: some View {
         CubitContentView()
     }

@@ -8,12 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		043EE4E125EC1C9500FAE1E8 /* CounterBloc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043EE4E025EC1C9500FAE1E8 /* CounterBloc.swift */; };
+		047A7BB925ED733700228011 /* BlocContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047A7BB825ED733700228011 /* BlocContentView.swift */; };
+		047A7BBB25ED735800228011 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047A7BBA25ED735800228011 /* MainView.swift */; };
 		047EC4D025EAEE860004C90C /* CounterCubit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047EC4CF25EAEE860004C90C /* CounterCubit.swift */; };
 		04EB15FB25EAC7E8008E0030 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04EB15FA25EAC7E8008E0030 /* SceneDelegate.swift */; };
 		08611E94466D97B3F329DCE3 /* Pods_SwiftBloc_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82EC3EC02FB63CEFC4EA0403 /* Pods_SwiftBloc_Tests.framework */; };
 		2EF31873A1F3203A48F66733 /* Pods_SwiftBloc_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D9208F1CC2C0172BFA8D1E4 /* Pods_SwiftBloc_Example.framework */; };
 		607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD51AFB9204008FA782 /* AppDelegate.swift */; };
-		607FACD81AFB9204008FA782 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD71AFB9204008FA782 /* ContentView.swift */; };
+		607FACD81AFB9204008FA782 /* CubitContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD71AFB9204008FA782 /* CubitContentView.swift */; };
 		607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDC1AFB9204008FA782 /* Images.xcassets */; };
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
 		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
@@ -33,6 +35,8 @@
 		03ED00AF75438BCB8C629F90 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		043EE4DE25EC197400FAE1E8 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; name = .swiftlint.yml; path = ../.swiftlint.yml; sourceTree = "<group>"; };
 		043EE4E025EC1C9500FAE1E8 /* CounterBloc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterBloc.swift; sourceTree = "<group>"; };
+		047A7BB825ED733700228011 /* BlocContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlocContentView.swift; sourceTree = "<group>"; };
+		047A7BBA25ED735800228011 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		047EC4CF25EAEE860004C90C /* CounterCubit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterCubit.swift; sourceTree = "<group>"; };
 		04EB15FA25EAC7E8008E0030 /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		0D9208F1CC2C0172BFA8D1E4 /* Pods_SwiftBloc_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftBloc_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -45,7 +49,7 @@
 		607FACD01AFB9204008FA782 /* SwiftBloc_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftBloc_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACD51AFB9204008FA782 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		607FACD71AFB9204008FA782 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		607FACD71AFB9204008FA782 /* CubitContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CubitContentView.swift; sourceTree = "<group>"; };
 		607FACDC1AFB9204008FA782 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		607FACDF1AFB9204008FA782 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		607FACE51AFB9204008FA782 /* SwiftBloc_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftBloc_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -74,6 +78,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		047A7BBC25ED7B5700228011 /* Cubit */ = {
+			isa = PBXGroup;
+			children = (
+				047EC4CF25EAEE860004C90C /* CounterCubit.swift */,
+				607FACD71AFB9204008FA782 /* CubitContentView.swift */,
+			);
+			name = Cubit;
+			sourceTree = "<group>";
+		};
+		047A7BBD25ED7B6400228011 /* Bloc */ = {
+			isa = PBXGroup;
+			children = (
+				043EE4E025EC1C9500FAE1E8 /* CounterBloc.swift */,
+				047A7BB825ED733700228011 /* BlocContentView.swift */,
+			);
+			name = Bloc;
+			sourceTree = "<group>";
+		};
 		607FACC71AFB9204008FA782 = {
 			isa = PBXGroup;
 			children = (
@@ -99,11 +121,11 @@
 		607FACD21AFB9204008FA782 /* Example for SwiftBloc */ = {
 			isa = PBXGroup;
 			children = (
-				043EE4E025EC1C9500FAE1E8 /* CounterBloc.swift */,
-				047EC4CF25EAEE860004C90C /* CounterCubit.swift */,
+				047A7BBD25ED7B6400228011 /* Bloc */,
+				047A7BBC25ED7B5700228011 /* Cubit */,
 				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
 				04EB15FA25EAC7E8008E0030 /* SceneDelegate.swift */,
-				607FACD71AFB9204008FA782 /* ContentView.swift */,
+				047A7BBA25ED735800228011 /* MainView.swift */,
 				607FACDC1AFB9204008FA782 /* Images.xcassets */,
 				607FACDE1AFB9204008FA782 /* LaunchScreen.xib */,
 				607FACD31AFB9204008FA782 /* Supporting Files */,
@@ -356,8 +378,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				043EE4E125EC1C9500FAE1E8 /* CounterBloc.swift in Sources */,
+				047A7BBB25ED735800228011 /* MainView.swift in Sources */,
 				047EC4D025EAEE860004C90C /* CounterCubit.swift in Sources */,
-				607FACD81AFB9204008FA782 /* ContentView.swift in Sources */,
+				047A7BB925ED733700228011 /* BlocContentView.swift in Sources */,
+				607FACD81AFB9204008FA782 /* CubitContentView.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
 				04EB15FB25EAC7E8008E0030 /* SceneDelegate.swift in Sources */,
 			);

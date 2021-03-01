@@ -15,7 +15,7 @@ enum CounterEvent {
 }
 
 struct CounterState: Equatable {
-    var state = 0
+    var count = 0
 }
 
 class CounterBloc: Bloc<CounterEvent, CounterState> {
@@ -26,9 +26,9 @@ class CounterBloc: Bloc<CounterEvent, CounterState> {
     override func mapEventToState(event: CounterEvent) -> CounterState {
         switch event {
         case .increment:
-            return CounterState(state: state.state + 1)
+            return CounterState(count: state.count + 1)
         case .decrement:
-            return CounterState(state: state.state - 1)
+            return CounterState(count: state.count - 1)
         }
     }
 }

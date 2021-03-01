@@ -17,4 +17,7 @@ class CounterCubit: Cubit<Int> {
     func increment() {
         emit(state: state + 1)
     }
+    func decrement() {
+         emit(state: state - 1)
+     }
 }

@@ -8,7 +8,7 @@
 import Combine
 
 open class Cubit<State>: ObservableObject where State: Equatable {
-    @Published public var state: State
+    @Published internal(set) public var state: State
 
     var emitted = false
 
