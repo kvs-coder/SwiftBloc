@@ -1,9 +1,8 @@
 //
 //  Log.swift
-//  ArticleSearch
+//  SwiftBloc
 //
-//  Created by Florian on 24.08.20.
-//  Copyright © 2020 Victor Kachalov. All rights reserved.
+//  Created by Kachalov, Victor on 24.08.20.
 //
 
 import Foundation
