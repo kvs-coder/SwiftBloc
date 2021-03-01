@@ -12,6 +12,8 @@ import SwiftBloc
 struct BlocContentView: View {
     @ObservedObject var bloc = CounterBloc()
 
+    @State var isAlertCalled = false
+
     var body: some View {
         BlocBuilder(builder: { (state) in
             VStack {
@@ -23,11 +25,20 @@ struct BlocContentView: View {
                             self.bloc.add(event: .decrement)
                             self.bloc.add(event: .decrement)
                             self.bloc.add(event: .decrement)
-                            self.bloc.add(event: .decrement)
                         }, label: {
                             Text("Reset")
                         })
                     }
+                } else if state.count == -1 {
+                    BlocListener(listener: { (state) in
+                        print(state.count)
+                        DispatchQueue.main.async {
+                            self.isAlertCalled = true
+                        }
+                    }, cubit: self.bloc, listenWhen: { (prev, cur) -> Bool in
+                        return prev == cur
+                    })
+                    .listen()
                 } else {
                     VStack {
                         Button(action: {
@@ -47,19 +58,12 @@ struct BlocContentView: View {
         }, cubit: bloc, buildWhen: { (prev, cur) -> Bool in
             return prev == cur
         })
-//        VStack {
-//            Button(action: {
-//                self.bloc.add(event: .increment)
-//            }, label: {
-//                Text("Send Increment event")
-//            })
-//            Button(action: {
-//                self.bloc.add(event: .decrement)
-//            }, label: {
-//                Text("Send Decrement event")
-//            })
-//            Text("Count: \(bloc.state.count)")
-//        }
+        .alert(isPresented: $isAlertCalled) {
+            Alert(title: Text("Hi"), message: Text("Message"), dismissButton: .cancel({
+                self.bloc.add(event: .increment)
+                self.bloc.add(event: .increment)
+            }))
+        }
     }
 }
 

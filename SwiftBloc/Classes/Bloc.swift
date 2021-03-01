@@ -8,7 +8,7 @@
 import Combine
 
 open class Bloc<Event, State>: Cubit<State> where State: Equatable, Event: Equatable {
-    @Published public var event: Event?
+    @Published internal(set) public var event: Event?
     
     private var cancellables = Set<AnyCancellable>()
     
@@ -18,7 +18,7 @@ open class Bloc<Event, State>: Cubit<State> where State: Equatable, Event: Equat
     }
     
     deinit {
-        cancellables.forEach({ $0.cancel() })
+        cancellables.forEach { $0.cancel() }
     }
     
     public func add(event: Event) {

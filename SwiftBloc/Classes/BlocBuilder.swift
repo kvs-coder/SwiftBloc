@@ -25,9 +25,9 @@ public struct BlocBuilder<C: Cubit<S>, S: Equatable, Content: View>: BlocBuilder
     }
 
     public init(
-        builder: @escaping BlocViewBuilder<S, Content>,
-        cubit: C,
-        buildWhen: @escaping BlocBuilderCondition<S>
+        @ViewBuilder builder: @escaping BlocViewBuilder<S, Content>,
+                     cubit: C,
+                     buildWhen: @escaping BlocBuilderCondition<S>
     ) {
         self.builder = builder
         self.buildWhen = buildWhen
