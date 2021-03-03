@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-public typealias BlocViewBuilder<S: Equatable, Content: View> = (_ state: S) -> Content
+//public typealias BlocViewBuilder<S: Equatable, Content: View> = (_ state: S) -> Content
 public typealias BlocBuilderCondition<S: Equatable> = (_ previous: S, _ current: S) -> Bool
 
 public struct BlocBuilder<S: Equatable, Content: View>: BlocBuilderBase  {
