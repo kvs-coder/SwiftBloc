@@ -10,8 +10,8 @@ import SwiftUI
 public typealias BlocViewBuilder<S: Equatable, Content: View> = (_ state: S) -> Content
 public typealias BlocBuilderCondition<S: Equatable> = (_ previous: S, _ current: S) -> Bool
 
-public struct BlocBuilder<C: Cubit<S>, S: Equatable, Content: View>: BlocBuilderBase  {
-    @ObservedObject internal var cubit: C
+public struct BlocBuilder<S: Equatable, Content: View>: BlocBuilderBase  {
+    @EnvironmentObject internal var cubit: Cubit<S>
 
     private var state: S {
         return cubit.state
@@ -26,12 +26,10 @@ public struct BlocBuilder<C: Cubit<S>, S: Equatable, Content: View>: BlocBuilder
 
     public init(
         @ViewBuilder builder: @escaping BlocViewBuilder<S, Content>,
-                     cubit: C,
                      buildWhen: @escaping BlocBuilderCondition<S>
     ) {
         self.builder = builder
         self.buildWhen = buildWhen
-        self.cubit = cubit
     }
 
     func build(state: S) -> Content {
@@ -41,10 +39,9 @@ public struct BlocBuilder<C: Cubit<S>, S: Equatable, Content: View>: BlocBuilder
 
 protocol BlocBuilderBase: View {
     associatedtype S where S: Equatable
-    associatedtype C where C: Cubit<S>
     associatedtype Content where Content: View
     
-    var cubit: C { get }
+    var cubit: Cubit<S> { get }
     var buildWhen: BlocBuilderCondition<S> { get }
     
     func build(state: S) -> Content

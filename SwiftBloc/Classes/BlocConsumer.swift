@@ -7,8 +7,8 @@
 
 import SwiftUI
 
-public struct BlocConsumer<C: Cubit<S>, S: Equatable, Content: View>: View {
-    @ObservedObject internal var cubit: C
+public struct BlocConsumer<S: Equatable, Content: View>: BlocConsumerBase {
+    @EnvironmentObject internal var cubit: Cubit<S>
 
     private var state: S {
         return cubit.state
@@ -20,20 +20,17 @@ public struct BlocConsumer<C: Cubit<S>, S: Equatable, Content: View>: View {
     let listener: BlocViewListener<S>
     
     public var body: some View {
-        //listen()
         return build(state: state)
     }
 
     public init(
         @ViewBuilder builder: @escaping BlocViewBuilder<S, Content>,
                      buildWhen: BlocBuilderCondition<S>? = nil,
-                     cubit: C,
                      listener: @escaping BlocViewListener<S>,
                      listenWhen: BlocListenerCondition<S>? = nil
     ) {
         self.builder = builder
         self.buildWhen = buildWhen
-        self.cubit = cubit
         self.listener = listener
         self.listenWhen = listenWhen
     }
@@ -42,7 +39,18 @@ public struct BlocConsumer<C: Cubit<S>, S: Equatable, Content: View>: View {
         return builder(state)
     }
     
-//    public func listen() {
-//        listener(state)
-//    }
+    func listen() {
+        listener(state)
+    }
+}
+
+protocol BlocConsumerBase: View {
+    associatedtype S where S: Equatable
+    associatedtype Content where Content: View
+    
+    var cubit: Cubit<S> { get }
+    var listenWhen: BlocListenerCondition<S>? { get }
+    
+    func build(state: S) -> Content
+    func listen()
 }

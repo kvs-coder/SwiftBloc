@@ -10,8 +10,8 @@ import SwiftUI
 public typealias BlocViewListener<S: Equatable> = (_ state: S) -> Void
 public typealias BlocListenerCondition<S: Equatable> = (_ previous: S, _ current: S) -> Bool
 
-public struct BlocListener<C: Cubit<S>, S: Equatable>: BlocListenerBase  {
-    @ObservedObject internal var cubit: C
+public struct BlocListener<S: Equatable>: BlocListenerBase  {
+    @EnvironmentObject internal var cubit: Cubit<S>
 
     private var state: S {
         return cubit.state
@@ -26,12 +26,10 @@ public struct BlocListener<C: Cubit<S>, S: Equatable>: BlocListenerBase  {
 
     public init(
         listener: @escaping BlocViewListener<S>,
-        cubit: C,
         listenWhen: BlocListenerCondition<S>? = nil
     ) {
         self.listener = listener
         self.listenWhen = listenWhen
-        self.cubit = cubit
     }
     
     public func listen() -> Self {
@@ -42,9 +40,8 @@ public struct BlocListener<C: Cubit<S>, S: Equatable>: BlocListenerBase  {
 
 protocol BlocListenerBase: View {
     associatedtype S where S: Equatable
-    associatedtype C where C: Cubit<S>
     
-    var cubit: C { get }
+    var cubit: Cubit<S> { get }
     var listenWhen: BlocListenerCondition<S>? { get }
     
     func listen() -> Self
