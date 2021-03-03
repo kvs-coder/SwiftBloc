@@ -17,7 +17,7 @@ public struct BlocListener<C: Cubit<S>, S: Equatable>: BlocListenerBase  {
         return cubit.state
     }
 
-    let listenWhen: BlocListenerCondition<S>
+    let listenWhen: BlocListenerCondition<S>?
     let listener: BlocViewListener<S>
     
     public var body: some View {
@@ -27,7 +27,7 @@ public struct BlocListener<C: Cubit<S>, S: Equatable>: BlocListenerBase  {
     public init(
         listener: @escaping BlocViewListener<S>,
         cubit: C,
-        listenWhen: @escaping BlocListenerCondition<S>
+        listenWhen: BlocListenerCondition<S>? = nil
     ) {
         self.listener = listener
         self.listenWhen = listenWhen
@@ -45,7 +45,7 @@ protocol BlocListenerBase: View {
     associatedtype C where C: Cubit<S>
     
     var cubit: C { get }
-    var listenWhen: BlocListenerCondition<S> { get }
+    var listenWhen: BlocListenerCondition<S>? { get }
     
     func listen() -> Self
 }

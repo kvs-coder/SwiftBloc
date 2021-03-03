@@ -10,6 +10,7 @@
 		03DBDA358AC2B1CEB57877AED990392A /* Pods-SwiftBloc_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = F0FA8C740C38B77B7CEB65E90AFA34D8 /* Pods-SwiftBloc_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		043EE4E325EC2A7200FAE1E8 /* BlocBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043EE4E225EC2A7200FAE1E8 /* BlocBuilder.swift */; };
 		047A7BBF25ED827000228011 /* BlocListener.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047A7BBE25ED827000228011 /* BlocListener.swift */; };
+		047A7BC125ED952900228011 /* BlocConsumer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047A7BC025ED952900228011 /* BlocConsumer.swift */; };
 		047EC4E325EB98430004C90C /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047EC4DC25EB98430004C90C /* Log.swift */; };
 		047EC4E425EB98430004C90C /* Bloc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047EC4DD25EB98430004C90C /* Bloc.swift */; };
 		047EC4E525EB98430004C90C /* BlocObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047EC4DE25EB98430004C90C /* BlocObserver.swift */; };
@@ -47,6 +48,7 @@
 		028049482854BEC4E733ED6BBCA44E3D /* Pods-SwiftBloc_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-SwiftBloc_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
 		043EE4E225EC2A7200FAE1E8 /* BlocBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlocBuilder.swift; sourceTree = "<group>"; };
 		047A7BBE25ED827000228011 /* BlocListener.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlocListener.swift; sourceTree = "<group>"; };
+		047A7BC025ED952900228011 /* BlocConsumer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlocConsumer.swift; sourceTree = "<group>"; };
 		047EC4DC25EB98430004C90C /* Log.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Log.swift; sourceTree = "<group>"; };
 		047EC4DD25EB98430004C90C /* Bloc.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Bloc.swift; sourceTree = "<group>"; };
 		047EC4DE25EB98430004C90C /* BlocObserver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlocObserver.swift; sourceTree = "<group>"; };
@@ -124,6 +126,7 @@
 				047EC4DD25EB98430004C90C /* Bloc.swift */,
 				043EE4E225EC2A7200FAE1E8 /* BlocBuilder.swift */,
 				047A7BBE25ED827000228011 /* BlocListener.swift */,
+				047A7BC025ED952900228011 /* BlocConsumer.swift */,
 				047EC4DE25EB98430004C90C /* BlocObserver.swift */,
 				047EC4E025EB98430004C90C /* Change.swift */,
 				047EC4E125EB98430004C90C /* Transition.swift */,
@@ -414,6 +417,7 @@
 				047EC4E825EB98430004C90C /* Transition.swift in Sources */,
 				047EC4E425EB98430004C90C /* Bloc.swift in Sources */,
 				047EC4E325EB98430004C90C /* Log.swift in Sources */,
+				047A7BC125ED952900228011 /* BlocConsumer.swift in Sources */,
 				043EE4E325EC2A7200FAE1E8 /* BlocBuilder.swift in Sources */,
 				047EC4E925EB98430004C90C /* Cubit.swift in Sources */,
 				047A7BBF25ED827000228011 /* BlocListener.swift in Sources */,
