@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-public typealias BlocViewListener<S: Equatable> = (_ state: S) -> Void
+//public typealias BlocViewListener<S: Equatable> = (_ state: S) -> Void
 public typealias BlocListenerCondition<S: Equatable> = (_ previous: S, _ current: S) -> Bool
 
 public struct BlocListener<S: Equatable>: BlocListenerBase  {

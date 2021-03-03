@@ -8,25 +8,31 @@
 import SwiftUI
 
 public typealias BlocViewBuilder<S: Equatable, Content: View> = (_ state: S) -> Content
+public typealias BlocViewListener<S: Equatable> = (_ state: S) -> Void
 
 public struct BlocView<C: Cubit<S>, S: Equatable, Content: View>: BlocViewProtocol  {
-    internal var cubit: C
+    var cubit: C
 
     private var state: S {
         return cubit.state
     }
 
-    let builder: BlocViewBuilder<S, Content>
+    private let builder: BlocViewBuilder<S, Content>
+    private let listener: BlocViewListener<S>?
 
     public var body: some View {
-        build(state: state).environmentObject(cubit)
+        build(state: state)
+            .listen(state: state, listener: listener)
+            .environmentObject(cubit)
     }
 
     public init(
         @ViewBuilder builder: @escaping BlocViewBuilder<S, Content>,
+                     listener: BlocViewListener<S>? = nil,
                      cubit: C
     ) {
         self.builder = builder
+        self.listener = listener
         self.cubit = cubit
     }
 
@@ -43,4 +49,11 @@ protocol BlocViewProtocol: View {
     var cubit: C { get }
 
     func build(state: S) -> Content
+}
+
+extension View {
+    func listen<S>(state: S, listener: BlocViewListener<S>?) -> some View {
+        listener?(state)
+        return self
+    }
 }

@@ -10,112 +10,73 @@ import SwiftUI
 import SwiftBloc
 
 struct BlocContentView: View {
-    @EnvironmentObject var bloc: CounterBloc
+    @ObservedObject var bloc = CounterBloc()
 
     @State var isAlertCalled = false
 
-//    var blocBuilder: some View {
-//        BlocBuilder<CounterBloc, CounterState>(builder: { (state) in
-//            VStack {
-//                if state.count > 5 {
-//                    VStack {
-//                        Text("Hooora")
-//                        Button(action: {
-//                            self.bloc.add(event: .decrement)
-//                            self.bloc.add(event: .decrement)
-//                            self.bloc.add(event: .decrement)
-//                            self.bloc.add(event: .decrement)
-//                        }, label: {
-//                            Text("Reset")
-//                        })
-//                    }
-//                } else if state.count == -1 {
-//                    self.blocListener
-//                } else {
-//                    VStack {
-//                        Button(action: {
-//                            self.bloc.add(event: .increment)
-//                        }, label: {
-//                            Text("Send Increment event")
-//                        })
-//                        Button(action: {
-//                            self.bloc.add(event: .decrement)
-//                        }, label: {
-//                            Text("Send Decrement event")
-//                        })
-//                        Text("Count: \(state.count)")
-//                    }
-//                }
-//            }
-//        }, buildWhen: { (prev, cur) -> Bool in
-//            return prev == cur
-//        })
-//            .alert(isPresented: $isAlertCalled) {
-//                Alert(title: Text("Hi"), message: Text("Message"), dismissButton: .cancel({
-//                    self.bloc.add(event: .increment)
-//                    self.bloc.add(event: .increment)
-//                }))
-//        }
-//    }
-//
-//    var blocListener: some View {
-//        BlocListener<CounterBloc, CounterState>(listener: { (state) in
-//            print(state.count)
-//            DispatchQueue.main.async {
-//                self.isAlertCalled = true
-//            }
-//        })
-//            .listen()
-//    }
+    var body: some View {
+        BlocView(builder: { (state) in
+            VStack {
+                if state.count > 5 {
+                    LimitView()
+                } else {
+                    OperationView()
+                }
+            }
+        }, listener: { (state) in
+            print(state.count)
+            if state.count < -1 {
+                DispatchQueue.main.async {
+                    self.isAlertCalled = true
+                }
+            }
+        }, cubit: bloc)
+        .alert(isPresented: $isAlertCalled) {
+            Alert(title: Text("Hi"), message: Text("Message"), dismissButton: .cancel({
+                self.bloc.add(event: .increment)
+                self.bloc.add(event: .increment)
+            }))
+        }
+    }
+}
+
+struct LimitView: View {
+    @EnvironmentObject var bloc: CounterBloc
 
     var body: some View {
-        BlocProvider(cubit: CounterBloc(), view: {
-            BlocConsumer(builder: { (state) in
-                VStack {
-                    if state.count > 5 {
-                        VStack {
-                            Text("Hooora")
-                            Button(action: {
-                                self.bloc.add(event: .decrement)
-                                self.bloc.add(event: .decrement)
-                                self.bloc.add(event: .decrement)
-                                self.bloc.add(event: .decrement)
-                            }, label: {
-                                Text("Reset")
-                            })
-                        }
-                    } else {
-                        VStack {
-                            Button(action: {
-                                self.bloc.add(event: .increment)
-                            }, label: {
-                                Text("Send Increment event")
-                            })
-                            Button(action: {
-                                self.bloc.add(event: .decrement)
-                            }, label: {
-                                Text("Send Decrement event")
-                            })
-                            Text("Count: \(state.count)")
-                        }
-                    }
-                }
-            }, listener: { (state) in
-                print(self.bloc.state.count)
-                if state.count == -1 {
-                    print(state.count)
-                    DispatchQueue.main.async {
-                        self.isAlertCalled = true
-                    }
-                }
+        VStack {
+            Text("Hooora")
+            Button(action: {
+                self.bloc.add(event: .decrement)
+                self.bloc.add(event: .decrement)
+                self.bloc.add(event: .decrement)
+                self.bloc.add(event: .decrement)
+                self.bloc.add(event: .decrement)
+                self.bloc.add(event: .decrement)
+            }, label: {
+                Text("Reset")
             })
-            .alert(isPresented: $isAlertCalled) {
-                Alert(title: Text("Hi"), message: Text("Message"), dismissButton: .cancel({
-                    self.bloc.add(event: .increment)
-                    self.bloc.add(event: .increment)
-                }))
-            }
-        })
+        }
+    }
+}
+
+struct OperationView: View {
+    @EnvironmentObject var bloc: CounterBloc
+
+    var body: some View {
+        VStack {
+            Button(action: {
+                self.bloc.add(event: .increment)
+            }, label: {
+                Text("Send Increment event")
+            })
+            Button(action: {
+                self.bloc.add(event: .decrement)
+            }, label: {
+                Text("Send Decrement event")
+            })
+            Text("Count: \(bloc.state.count)")
+        }
     }
 }
 

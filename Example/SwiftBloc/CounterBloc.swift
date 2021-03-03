@@ -15,20 +15,24 @@ enum CounterEvent {
 }
 
 struct CounterState: Equatable {
-    var count = 0
+    let count: Int
+
+    func copyWith(count: Int?) -> CounterState {
+        CounterState(count: count ?? self.count)
+    }
 }
 
 class CounterBloc: Bloc<CounterEvent, CounterState> {
     init() {
-        super.init(intialState: CounterState())
+        super.init(intialState: CounterState(count: 0))
     }
 
     override func mapEventToState(event: CounterEvent) -> CounterState {
         switch event {
         case .increment:
-            return CounterState(count: state.count + 1)
+            return state.copyWith(count: state.count + 1)
         case .decrement:
-            return CounterState(count: state.count - 1)
+            return state.copyWith(count: state.count - 1)
         }
     }
 }

@@ -11,12 +11,12 @@ open class Bloc<Event, State>: Cubit<State> where State: Equatable, Event: Equat
     @Published internal(set) public var event: Event?
     
     private var cancellables = Set<AnyCancellable>()
-    
+
     public init(intialState: State) {
         super.init(state: intialState)
         bindEventsToStates()
     }
-    
+
     deinit {
         cancellables.forEach { $0.cancel() }
     }
