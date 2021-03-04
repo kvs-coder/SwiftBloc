@@ -2,8 +2,8 @@
 //  ViewController.swift
 //  SwiftBloc
 //
-//  Created by v.kachalov on 02/27/2021.
-//  Copyright (c) 2021 v.kachalov. All rights reserved.
+//  Created by Victor Kachalov on 02/27/2021.
+//  Copyright (c) 2021 Victor Kachalov. All rights reserved.
 //
 
 import SwiftBloc
