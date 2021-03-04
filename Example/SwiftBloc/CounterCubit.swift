@@ -18,6 +18,6 @@ class CounterCubit: Cubit<Int> {
         emit(state: state + 1)
     }
     func decrement() {
-         emit(state: state - 1)
-     }
+        emit(state: state - 1)
+    }
 }

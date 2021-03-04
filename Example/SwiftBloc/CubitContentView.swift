@@ -13,19 +13,21 @@ struct CubitContentView: View {
     @ObservedObject var cubit = CounterCubit()
 
     var body: some View {
-        VStack {
-            Button(action: {
-                self.cubit.increment()
-            }, label: {
-                Text("Increment")
-            })
-            Button(action: {
-                self.cubit.decrement()
-            }, label: {
-                Text("Decrement")
-            })
-            Text("Count: \(cubit.state)")
-        }
+        BlocView(builder: { (state)  in
+            VStack {
+                Button(action: {
+                    self.cubit.increment()
+                }, label: {
+                    Text("Increment")
+                })
+                Button(action: {
+                    self.cubit.decrement()
+                }, label: {
+                    Text("Decrement")
+                })
+                Text("Count: \(state)")
+            }
+        }, cubit: cubit)
     }
 }
 

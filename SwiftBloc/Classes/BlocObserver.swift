@@ -23,11 +23,11 @@ open class BlocObserver {
     public init() {
         logInfo("BlocObserver init")
     }
-    
+
     deinit {
         logInfo("BlocObserver deinit")
     }
-    
+
     /**
      Called when **Bloc** or **Cubit** instance is created.
      - parameter cubit: cubit or bloc.

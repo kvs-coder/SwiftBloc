@@ -13,16 +13,15 @@ import Foundation
 public class Change<State> {
     public let currentState: State
     public let nextState: State
-    
+
     var description: String {
         "Change currentState: \(currentState) to nextState: \(nextState)"
     }
-    
+
     init(currentState: State, nextState: State) {
         self.currentState = currentState
         self.nextState = nextState
     }
-    
 }
 // MARK: - Equatable
 extension Change: Equatable where State: Equatable {
