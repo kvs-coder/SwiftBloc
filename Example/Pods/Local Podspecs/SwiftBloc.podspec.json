@@ -1,8 +1,8 @@
 {
   "name": "SwiftBloc",
   "version": "0.1.0",
-  "summary": "A short description of SwiftBloc.",
-  "description": "TODO: Add long description of the pod here.",
+  "summary": "SwiftBloc. A state management library",
+  "description": "Separates presentation from business logic. Ideal for testability and reusability.",
   "homepage": "https://github.com/v.kachalov/SwiftBloc",
   "license": {
     "type": "MIT",
@@ -15,8 +15,9 @@
     "git": "https://github.com/v.kachalov/SwiftBloc.git",
     "tag": "0.1.0"
   },
+  "social_media_url": "https://www.facebook.com/profile.php?id=1700091944",
   "platforms": {
-    "ios": "9.0"
+    "ios": "13.0"
   },
   "source_files": "SwiftBloc/Classes/**/*"
 }

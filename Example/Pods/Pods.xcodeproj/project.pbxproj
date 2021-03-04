@@ -8,87 +8,84 @@
 
 /* Begin PBXBuildFile section */
 		03DBDA358AC2B1CEB57877AED990392A /* Pods-SwiftBloc_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = F0FA8C740C38B77B7CEB65E90AFA34D8 /* Pods-SwiftBloc_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		0416FEAB25F0DA08006CB073 /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0416FEAA25F0DA08006CB073 /* Errors.swift */; };
-		042B051125F01B3F001777C6 /* BlocView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042B051025F01B3F001777C6 /* BlocView.swift */; };
-		042D4DAB25F0E595002962C7 /* Extensions+View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042D4DAA25F0E595002962C7 /* Extensions+View.swift */; };
-		047EC4E325EB98430004C90C /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047EC4DC25EB98430004C90C /* Log.swift */; };
-		047EC4E425EB98430004C90C /* Bloc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047EC4DD25EB98430004C90C /* Bloc.swift */; };
-		047EC4E525EB98430004C90C /* BlocObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047EC4DE25EB98430004C90C /* BlocObserver.swift */; };
-		047EC4E725EB98430004C90C /* Change.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047EC4E025EB98430004C90C /* Change.swift */; };
-		047EC4E825EB98430004C90C /* Transition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047EC4E125EB98430004C90C /* Transition.swift */; };
-		047EC4E925EB98430004C90C /* Cubit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047EC4E225EB98430004C90C /* Cubit.swift */; };
 		05F4FF942A235E2AA5B05F9AD98A3279 /* Pods-SwiftBloc_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 45000D8553DE4F4298F778F24BEFF4DE /* Pods-SwiftBloc_Example-dummy.m */; };
 		11A6C0A3AD6CC6835E8AD26375A46B6A /* Pods-SwiftBloc_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 719F4927296DCBB3598D184EB805989D /* Pods-SwiftBloc_Tests-dummy.m */; };
-		3D4D17DF715B625460CB847B4075F1FF /* SwiftBloc-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = F2789A76F730285F76EC83D2C77AC710 /* SwiftBloc-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		7CB34569FF732660A24A214AC18273B7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		19ED7FBC67733648DAF56B295BCCF023 /* BlocObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09CEA212CE880727C75C5A417D4B185C /* BlocObserver.swift */; };
+		5FEDBDDB81C5A993CA38641862B22BEA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		6071E7FF906B2B48BBDD55078FFB3865 /* Change.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34DAC7665F087EA6F075C4C24C429355 /* Change.swift */; };
+		637EEFF2D6DCF6C97197A9D8F8906FA0 /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AFD8EC7A204B4BDF1B4377CADA4911E /* Errors.swift */; };
+		6EC929C682BDF7165952D6EFE0FA4F80 /* BlocView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42DC73BF6C3424B440AA45A35E6827FD /* BlocView.swift */; };
+		706C69FD5982AE353B185B86925AADD8 /* Extensions+View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5541B31FA72F8825D40D9743F2CAF6B7 /* Extensions+View.swift */; };
+		8273AF389FF070E5E189A3F6B699A263 /* Transition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A0375B3016742928FEE8DCA894C3F5 /* Transition.swift */; };
+		88A14AD989CAAA9D047AE43D741D46AC /* SwiftBloc-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 2661E9D375D2F22225B7CEFB564BE30A /* SwiftBloc-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8FE95A9CA3FD8505150757F3D38BFD85 /* Pods-SwiftBloc_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 3DB58157785CCD2731CEAFF93895D93B /* Pods-SwiftBloc_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		983D605EF7B52088F2CBF5AF0FA2C315 /* SwiftBloc-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 5625F53FAFA0A304E03A86A005161934 /* SwiftBloc-dummy.m */; };
+		AD84EA2FB1AA6281E752B74F57B1ACA2 /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = E74D5763E376F37F2093CBAB22D624A5 /* Log.swift */; };
+		B8E9959D767C0B7D979822F80FB8E9B5 /* Cubit.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABAAF537992A20D76EA290111428988F /* Cubit.swift */; };
 		BABAC690007A19144FB276832133904B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
-		E10ADFCE3DAA515D1C53BA5D867ADB51 /* SwiftBloc-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E8471E9433AB16304C4872B59DEEFE0 /* SwiftBloc-dummy.m */; };
 		F3F71B3CC49DEA2CE78707CEC1F1B6E4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		F4FD4FEE29F28443DAC3F7D4A9488FC3 /* Bloc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F0136728AC74BD173E13DE343DDB77 /* Bloc.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		60BD000022A50E4EB38D6EA45FDDBDF9 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 47786941F044A34C7867DBBEA6FB4BF4;
-			remoteInfo = "Pods-SwiftBloc_Example";
-		};
-		BCC203EACBD311B7FAF7E35C5C811877 /* PBXContainerItemProxy */ = {
+		98D4DE57429BA760C0C3FB1B4C2DE5BF /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 79B7D7E4BAADFFEE04B13B9BF7737A2A;
 			remoteInfo = SwiftBloc;
 		};
+		EBFBFBE597564AF67A3CA3DA4AC65D64 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 47786941F044A34C7867DBBEA6FB4BF4;
+			remoteInfo = "Pods-SwiftBloc_Example";
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		028049482854BEC4E733ED6BBCA44E3D /* Pods-SwiftBloc_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-SwiftBloc_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
-		0416FEAA25F0DA08006CB073 /* Errors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Errors.swift; sourceTree = "<group>"; };
-		042B051025F01B3F001777C6 /* BlocView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlocView.swift; sourceTree = "<group>"; };
-		042D4DAA25F0E595002962C7 /* Extensions+View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extensions+View.swift"; sourceTree = "<group>"; };
-		047EC4DC25EB98430004C90C /* Log.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Log.swift; sourceTree = "<group>"; };
-		047EC4DD25EB98430004C90C /* Bloc.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Bloc.swift; sourceTree = "<group>"; };
-		047EC4DE25EB98430004C90C /* BlocObserver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlocObserver.swift; sourceTree = "<group>"; };
-		047EC4E025EB98430004C90C /* Change.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Change.swift; sourceTree = "<group>"; };
-		047EC4E125EB98430004C90C /* Transition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Transition.swift; sourceTree = "<group>"; };
-		047EC4E225EB98430004C90C /* Cubit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cubit.swift; sourceTree = "<group>"; };
-		0485BB5B25F1090300626B7D /* CHANGELOG.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = CHANGELOG.md; sourceTree = "<group>"; };
-		04EB15FF25EAC9AF008E0030 /* CODE_OF_CONDUCT.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; name = CODE_OF_CONDUCT.md; path = ../HealthKitReporter/CODE_OF_CONDUCT.md; sourceTree = "<group>"; };
-		04EB160025EAC9AF008E0030 /* CONTRIBUTING.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; name = CONTRIBUTING.md; path = ../HealthKitReporter/CONTRIBUTING.md; sourceTree = "<group>"; };
-		143519F468D5AD38F92403386DDD2DBD /* SwiftBloc.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftBloc.release.xcconfig; sourceTree = "<group>"; };
-		1C9A01DBA47458C98DD047C3C3728341 /* SwiftBloc.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftBloc.debug.xcconfig; sourceTree = "<group>"; };
+		09CEA212CE880727C75C5A417D4B185C /* BlocObserver.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BlocObserver.swift; path = SwiftBloc/Classes/BlocObserver.swift; sourceTree = "<group>"; };
+		18F0136728AC74BD173E13DE343DDB77 /* Bloc.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Bloc.swift; path = SwiftBloc/Classes/Bloc.swift; sourceTree = "<group>"; };
 		1F117E2411164C1C4BA6EB1153346C70 /* Pods-SwiftBloc_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SwiftBloc_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		2563CC670C55532B2DC021EA47417DCB /* Pods_SwiftBloc_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftBloc_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2661E9D375D2F22225B7CEFB564BE30A /* SwiftBloc-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftBloc-umbrella.h"; sourceTree = "<group>"; };
 		284432E908669F9F167E855699CDD9F6 /* SwiftBloc.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftBloc.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2D248BFC39069F1729B1335B8950E222 /* SwiftBloc.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = SwiftBloc.modulemap; sourceTree = "<group>"; };
 		30D33ECED106E4CE5AD94FE050FA2A2A /* Pods-SwiftBloc_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-SwiftBloc_Tests.modulemap"; sourceTree = "<group>"; };
+		34DAC7665F087EA6F075C4C24C429355 /* Change.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Change.swift; sourceTree = "<group>"; };
+		3AFD8EC7A204B4BDF1B4377CADA4911E /* Errors.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Errors.swift; path = SwiftBloc/Classes/Errors.swift; sourceTree = "<group>"; };
 		3DB58157785CCD2731CEAFF93895D93B /* Pods-SwiftBloc_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-SwiftBloc_Tests-umbrella.h"; sourceTree = "<group>"; };
+		42DC73BF6C3424B440AA45A35E6827FD /* BlocView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BlocView.swift; path = SwiftBloc/Classes/BlocView.swift; sourceTree = "<group>"; };
 		45000D8553DE4F4298F778F24BEFF4DE /* Pods-SwiftBloc_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-SwiftBloc_Example-dummy.m"; sourceTree = "<group>"; };
 		48E9E287E51F5E1F2FE427338F7134E1 /* Pods-SwiftBloc_Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SwiftBloc_Example-Info.plist"; sourceTree = "<group>"; };
-		4B568EBFD9ADCBB0292DBAABC9518D70 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		49A0375B3016742928FEE8DCA894C3F5 /* Transition.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Transition.swift; sourceTree = "<group>"; };
 		4CAA5538337445B5A4D0FFE77BAEC04C /* Pods-SwiftBloc_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SwiftBloc_Example-frameworks.sh"; sourceTree = "<group>"; };
+		5541B31FA72F8825D40D9743F2CAF6B7 /* Extensions+View.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "Extensions+View.swift"; sourceTree = "<group>"; };
+		5625F53FAFA0A304E03A86A005161934 /* SwiftBloc-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SwiftBloc-dummy.m"; sourceTree = "<group>"; };
 		61F0D509920F6BBEF4BF2C6C838F033B /* Pods-SwiftBloc_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SwiftBloc_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		6BBF7851E8EDACFE5CC692AAD2131712 /* SwiftBloc.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = SwiftBloc.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		6FCDE2307D6C34E367D25226FD00A56D /* Pods-SwiftBloc_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SwiftBloc_Example.release.xcconfig"; sourceTree = "<group>"; };
 		701E887D882D63679A5CB89A3F983AC9 /* Pods-SwiftBloc_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SwiftBloc_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
 		719F4927296DCBB3598D184EB805989D /* Pods-SwiftBloc_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-SwiftBloc_Tests-dummy.m"; sourceTree = "<group>"; };
 		73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		73D2DDB204F98338B1B1D3E99769A97E /* SwiftBloc.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = SwiftBloc.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		778D99C505E05AE27D7B3010FD98CB5A /* Pods-SwiftBloc_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SwiftBloc_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		8321068A0B9DA7BDD0840A60DD073279 /* SwiftBloc-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "SwiftBloc-Info.plist"; sourceTree = "<group>"; };
-		8E8471E9433AB16304C4872B59DEEFE0 /* SwiftBloc-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SwiftBloc-dummy.m"; sourceTree = "<group>"; };
+		7CCFF43CFCDBD1F74E93EF5DABC83360 /* SwiftBloc-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "SwiftBloc-Info.plist"; sourceTree = "<group>"; };
 		90E985563EDBF0EA8CEF96B1DB9C4E88 /* Pods-SwiftBloc_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SwiftBloc_Example-acknowledgements.plist"; sourceTree = "<group>"; };
 		91E4E5DBA03A56135B4D9DBC76F78068 /* Pods-SwiftBloc_Tests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SwiftBloc_Tests-Info.plist"; sourceTree = "<group>"; };
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		A61BFCA91A030BC1B5A4B6D228A3618E /* Pods_SwiftBloc_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftBloc_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		ABAAF537992A20D76EA290111428988F /* Cubit.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Cubit.swift; path = SwiftBloc/Classes/Cubit.swift; sourceTree = "<group>"; };
 		B110FFEA23DE6FF1A3B0E0B4C2BDF9D3 /* Pods-SwiftBloc_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-SwiftBloc_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
-		C70377411C9348991CF2E61A4F33C0B1 /* SwiftBloc-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftBloc-prefix.pch"; sourceTree = "<group>"; };
-		DB3DFBA00DEC66A9EE7260C80EAE8DFB /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		B9FE1EA11ED4AE3E59AFF08746C5C332 /* SwiftBloc.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftBloc.release.xcconfig; sourceTree = "<group>"; };
+		DB5D1F643F76D0167E230A403734C05C /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		DCA3BD67EA39831E323702826DB738A9 /* Pods-SwiftBloc_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-SwiftBloc_Example.modulemap"; sourceTree = "<group>"; };
+		E74D5763E376F37F2093CBAB22D624A5 /* Log.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Log.swift; path = SwiftBloc/Classes/Log.swift; sourceTree = "<group>"; };
+		E77001526DE415F2E3A76FDDF9231D32 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		F015FC43764E26BF6C01713B4F15C2D9 /* SwiftBloc.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftBloc.debug.xcconfig; sourceTree = "<group>"; };
 		F0FA8C740C38B77B7CEB65E90AFA34D8 /* Pods-SwiftBloc_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-SwiftBloc_Example-umbrella.h"; sourceTree = "<group>"; };
-		F2789A76F730285F76EC83D2C77AC710 /* SwiftBloc-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftBloc-umbrella.h"; sourceTree = "<group>"; };
-		F4162EEBD7761D9505FFDBFF1586CF75 /* SwiftBloc.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = SwiftBloc.modulemap; sourceTree = "<group>"; };
+		F1D3103A728489F00D95178A47A8DB61 /* SwiftBloc-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftBloc-prefix.pch"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,11 +97,11 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		7FCDFE3F7CD94984E8116C47A2845319 /* Frameworks */ = {
+		6E89A34DEA4326DC169962E8C99DBF4F /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7CB34569FF732660A24A214AC18273B7 /* Foundation.framework in Frameworks */,
+				5FEDBDDB81C5A993CA38641862B22BEA /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -119,65 +116,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0416FEAC25F0DB50006CB073 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				047EC4E025EB98430004C90C /* Change.swift */,
-				047EC4E125EB98430004C90C /* Transition.swift */,
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		042D4DA925F0E57E002962C7 /* Decorator */ = {
-			isa = PBXGroup;
-			children = (
-				042D4DAA25F0E595002962C7 /* Extensions+View.swift */,
-			);
-			path = Decorator;
-			sourceTree = "<group>";
-		};
-		047EC4DB25EB98430004C90C /* Classes */ = {
-			isa = PBXGroup;
-			children = (
-				042D4DA925F0E57E002962C7 /* Decorator */,
-				0416FEAC25F0DB50006CB073 /* Model */,
-				047EC4DC25EB98430004C90C /* Log.swift */,
-				0416FEAA25F0DA08006CB073 /* Errors.swift */,
-				042B051025F01B3F001777C6 /* BlocView.swift */,
-				047EC4DE25EB98430004C90C /* BlocObserver.swift */,
-				047EC4DD25EB98430004C90C /* Bloc.swift */,
-				047EC4E225EB98430004C90C /* Cubit.swift */,
-			);
-			name = Classes;
-			path = SwiftBloc/Classes;
-			sourceTree = "<group>";
-		};
-		21BCBABDBE42A5B1417924EB2EE4C6E4 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				F4162EEBD7761D9505FFDBFF1586CF75 /* SwiftBloc.modulemap */,
-				8E8471E9433AB16304C4872B59DEEFE0 /* SwiftBloc-dummy.m */,
-				8321068A0B9DA7BDD0840A60DD073279 /* SwiftBloc-Info.plist */,
-				C70377411C9348991CF2E61A4F33C0B1 /* SwiftBloc-prefix.pch */,
-				F2789A76F730285F76EC83D2C77AC710 /* SwiftBloc-umbrella.h */,
-				1C9A01DBA47458C98DD047C3C3728341 /* SwiftBloc.debug.xcconfig */,
-				143519F468D5AD38F92403386DDD2DBD /* SwiftBloc.release.xcconfig */,
-			);
-			name = "Support Files";
-			path = "Example/Pods/Target Support Files/SwiftBloc";
-			sourceTree = "<group>";
-		};
-		3607988575D283269E11EC1A18B75CA4 /* SwiftBloc */ = {
-			isa = PBXGroup;
-			children = (
-				047EC4DB25EB98430004C90C /* Classes */,
-				FFDA1305F8CE6E5AB362CDB918F874C2 /* Pod */,
-				21BCBABDBE42A5B1417924EB2EE4C6E4 /* Support Files */,
-			);
-			name = SwiftBloc;
-			path = ../..;
-			sourceTree = "<group>";
-		};
 		4179A2FE2742056DF6E2311331A86FA4 /* Pods-SwiftBloc_Example */ = {
 			isa = PBXGroup;
 			children = (
@@ -213,12 +151,40 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		76AA286704196EF9F0A2EA34D79290CC /* Development Pods */ = {
+		B251884A43483CEF006A9C07608D3380 /* SwiftBloc */ = {
 			isa = PBXGroup;
 			children = (
-				3607988575D283269E11EC1A18B75CA4 /* SwiftBloc */,
+				18F0136728AC74BD173E13DE343DDB77 /* Bloc.swift */,
+				09CEA212CE880727C75C5A417D4B185C /* BlocObserver.swift */,
+				42DC73BF6C3424B440AA45A35E6827FD /* BlocView.swift */,
+				ABAAF537992A20D76EA290111428988F /* Cubit.swift */,
+				3AFD8EC7A204B4BDF1B4377CADA4911E /* Errors.swift */,
+				E74D5763E376F37F2093CBAB22D624A5 /* Log.swift */,
+				F0614FE0D4D93ADC73582F0AE4CBFBCE /* Decorator */,
+				EBFC55BCBF827D2517DA07FF48FB3EA8 /* Model */,
+				BA2088AD5F8D9CEB24469E71D222404E /* Pod */,
+				D65E20EB0834F64FB8C41B2C48791561 /* Support Files */,
+			);
+			name = SwiftBloc;
+			path = ../..;
+			sourceTree = "<group>";
+		};
+		B8566B58D60165C6D7E4998BF1387250 /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B251884A43483CEF006A9C07608D3380 /* SwiftBloc */,
 			);
 			name = "Development Pods";
+			sourceTree = "<group>";
+		};
+		BA2088AD5F8D9CEB24469E71D222404E /* Pod */ = {
+			isa = PBXGroup;
+			children = (
+				DB5D1F643F76D0167E230A403734C05C /* LICENSE */,
+				E77001526DE415F2E3A76FDDF9231D32 /* README.md */,
+				6BBF7851E8EDACFE5CC692AAD2131712 /* SwiftBloc.podspec */,
+			);
+			name = Pod;
 			sourceTree = "<group>";
 		};
 		CD26FC4990BE5F3BE6A707E2D79B9F02 /* Pods-SwiftBloc_Tests */ = {
@@ -241,7 +207,7 @@
 			isa = PBXGroup;
 			children = (
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
-				76AA286704196EF9F0A2EA34D79290CC /* Development Pods */,
+				B8566B58D60165C6D7E4998BF1387250 /* Development Pods */,
 				D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */,
 				76473A7D9A0D7CBC4B5A01B078338B2E /* Products */,
 				FD92D442CD3AD769FEE9775228B16123 /* Targets Support Files */,
@@ -256,6 +222,40 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		D65E20EB0834F64FB8C41B2C48791561 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				2D248BFC39069F1729B1335B8950E222 /* SwiftBloc.modulemap */,
+				5625F53FAFA0A304E03A86A005161934 /* SwiftBloc-dummy.m */,
+				7CCFF43CFCDBD1F74E93EF5DABC83360 /* SwiftBloc-Info.plist */,
+				F1D3103A728489F00D95178A47A8DB61 /* SwiftBloc-prefix.pch */,
+				2661E9D375D2F22225B7CEFB564BE30A /* SwiftBloc-umbrella.h */,
+				F015FC43764E26BF6C01713B4F15C2D9 /* SwiftBloc.debug.xcconfig */,
+				B9FE1EA11ED4AE3E59AFF08746C5C332 /* SwiftBloc.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/SwiftBloc";
+			sourceTree = "<group>";
+		};
+		EBFC55BCBF827D2517DA07FF48FB3EA8 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				34DAC7665F087EA6F075C4C24C429355 /* Change.swift */,
+				49A0375B3016742928FEE8DCA894C3F5 /* Transition.swift */,
+			);
+			name = Model;
+			path = SwiftBloc/Classes/Model;
+			sourceTree = "<group>";
+		};
+		F0614FE0D4D93ADC73582F0AE4CBFBCE /* Decorator */ = {
+			isa = PBXGroup;
+			children = (
+				5541B31FA72F8825D40D9743F2CAF6B7 /* Extensions+View.swift */,
+			);
+			name = Decorator;
+			path = SwiftBloc/Classes/Decorator;
+			sourceTree = "<group>";
+		};
 		FD92D442CD3AD769FEE9775228B16123 /* Targets Support Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -263,19 +263,6 @@
 				CD26FC4990BE5F3BE6A707E2D79B9F02 /* Pods-SwiftBloc_Tests */,
 			);
 			name = "Targets Support Files";
-			sourceTree = "<group>";
-		};
-		FFDA1305F8CE6E5AB362CDB918F874C2 /* Pod */ = {
-			isa = PBXGroup;
-			children = (
-				0485BB5B25F1090300626B7D /* CHANGELOG.md */,
-				04EB15FF25EAC9AF008E0030 /* CODE_OF_CONDUCT.md */,
-				04EB160025EAC9AF008E0030 /* CONTRIBUTING.md */,
-				DB3DFBA00DEC66A9EE7260C80EAE8DFB /* LICENSE */,
-				4B568EBFD9ADCBB0292DBAABC9518D70 /* README.md */,
-				73D2DDB204F98338B1B1D3E99769A97E /* SwiftBloc.podspec */,
-			);
-			name = Pod;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -289,11 +276,11 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		5BF51607E381AD4682C6B1D75D6331B7 /* Headers */ = {
+		ADDDA2A664C509D2D3697F30E3927E5E /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3D4D17DF715B625460CB847B4075F1FF /* SwiftBloc-umbrella.h in Headers */,
+				88A14AD989CAAA9D047AE43D741D46AC /* SwiftBloc-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -320,7 +307,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				F6B9F629DD40EB1B2BF92A542EF28BBF /* PBXTargetDependency */,
+				E24D2477D60E5EBE1A95CCEBDB35EE7D /* PBXTargetDependency */,
 			);
 			name = "Pods-SwiftBloc_Tests";
 			productName = "Pods-SwiftBloc_Tests";
@@ -339,7 +326,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				F2D8AC967F633EE3273576387197A788 /* PBXTargetDependency */,
+				A960D9E40E672CEB2FF1ED1289724856 /* PBXTargetDependency */,
 			);
 			name = "Pods-SwiftBloc_Example";
 			productName = "Pods-SwiftBloc_Example";
@@ -348,12 +335,12 @@
 		};
 		79B7D7E4BAADFFEE04B13B9BF7737A2A /* SwiftBloc */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = BA763A0AAFFBA92BE77FD6E9FA5FDF94 /* Build configuration list for PBXNativeTarget "SwiftBloc" */;
+			buildConfigurationList = 481699B5BBEDCB43B6AE92BD21A57F97 /* Build configuration list for PBXNativeTarget "SwiftBloc" */;
 			buildPhases = (
-				5BF51607E381AD4682C6B1D75D6331B7 /* Headers */,
-				5603D816FC21EB6E5FDD8479ABDA9244 /* Sources */,
-				7FCDFE3F7CD94984E8116C47A2845319 /* Frameworks */,
-				C9270A339BF8DE105B6BE26C9BAC46B2 /* Resources */,
+				ADDDA2A664C509D2D3697F30E3927E5E /* Headers */,
+				B6C69CB56EC017E6C72300778F524F19 /* Sources */,
+				6E89A34DEA4326DC169962E8C99DBF4F /* Frameworks */,
+				F104DE801C51CDB75ABFFBBA04B875DB /* Resources */,
 			);
 			buildRules = (
 			);
@@ -372,14 +359,6 @@
 			attributes = {
 				LastSwiftUpdateCheck = 1100;
 				LastUpgradeCheck = 1100;
-				TargetAttributes = {
-					47786941F044A34C7867DBBEA6FB4BF4 = {
-						LastSwiftMigration = 1170;
-					};
-					79B7D7E4BAADFFEE04B13B9BF7737A2A = {
-						LastSwiftMigration = 1170;
-					};
-				};
 			};
 			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -409,14 +388,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		C9270A339BF8DE105B6BE26C9BAC46B2 /* Resources */ = {
+		D6CE6DF13788EBD1790E9D45A7048589 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D6CE6DF13788EBD1790E9D45A7048589 /* Resources */ = {
+		F104DE801C51CDB75ABFFBBA04B875DB /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -426,28 +405,28 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		5603D816FC21EB6E5FDD8479ABDA9244 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				047EC4E825EB98430004C90C /* Transition.swift in Sources */,
-				047EC4E425EB98430004C90C /* Bloc.swift in Sources */,
-				047EC4E325EB98430004C90C /* Log.swift in Sources */,
-				042B051125F01B3F001777C6 /* BlocView.swift in Sources */,
-				047EC4E925EB98430004C90C /* Cubit.swift in Sources */,
-				0416FEAB25F0DA08006CB073 /* Errors.swift in Sources */,
-				042D4DAB25F0E595002962C7 /* Extensions+View.swift in Sources */,
-				E10ADFCE3DAA515D1C53BA5D867ADB51 /* SwiftBloc-dummy.m in Sources */,
-				047EC4E525EB98430004C90C /* BlocObserver.swift in Sources */,
-				047EC4E725EB98430004C90C /* Change.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		AFDC1F60B54DF46FB25A14232FC6887F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				05F4FF942A235E2AA5B05F9AD98A3279 /* Pods-SwiftBloc_Example-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B6C69CB56EC017E6C72300778F524F19 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F4FD4FEE29F28443DAC3F7D4A9488FC3 /* Bloc.swift in Sources */,
+				19ED7FBC67733648DAF56B295BCCF023 /* BlocObserver.swift in Sources */,
+				6EC929C682BDF7165952D6EFE0FA4F80 /* BlocView.swift in Sources */,
+				6071E7FF906B2B48BBDD55078FFB3865 /* Change.swift in Sources */,
+				B8E9959D767C0B7D979822F80FB8E9B5 /* Cubit.swift in Sources */,
+				637EEFF2D6DCF6C97197A9D8F8906FA0 /* Errors.swift in Sources */,
+				706C69FD5982AE353B185B86925AADD8 /* Extensions+View.swift in Sources */,
+				AD84EA2FB1AA6281E752B74F57B1ACA2 /* Log.swift in Sources */,
+				983D605EF7B52088F2CBF5AF0FA2C315 /* SwiftBloc-dummy.m in Sources */,
+				8273AF389FF070E5E189A3F6B699A263 /* Transition.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -462,27 +441,28 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		F2D8AC967F633EE3273576387197A788 /* PBXTargetDependency */ = {
+		A960D9E40E672CEB2FF1ED1289724856 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = SwiftBloc;
 			target = 79B7D7E4BAADFFEE04B13B9BF7737A2A /* SwiftBloc */;
-			targetProxy = BCC203EACBD311B7FAF7E35C5C811877 /* PBXContainerItemProxy */;
+			targetProxy = 98D4DE57429BA760C0C3FB1B4C2DE5BF /* PBXContainerItemProxy */;
 		};
-		F6B9F629DD40EB1B2BF92A542EF28BBF /* PBXTargetDependency */ = {
+		E24D2477D60E5EBE1A95CCEBDB35EE7D /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "Pods-SwiftBloc_Example";
 			target = 47786941F044A34C7867DBBEA6FB4BF4 /* Pods-SwiftBloc_Example */;
-			targetProxy = 60BD000022A50E4EB38D6EA45FDDBDF9 /* PBXContainerItemProxy */;
+			targetProxy = EBFBFBE597564AF67A3CA3DA4AC65D64 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		03E3011A2FEC401C25693C29797D7FB5 /* Release */ = {
+		3678EDCB2417D7956CE72A8C7B6E7CF0 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6FCDE2307D6C34E367D25226FD00A56D /* Pods-SwiftBloc_Example.release.xcconfig */;
+			baseConfigurationReference = 778D99C505E05AE27D7B3010FD98CB5A /* Pods-SwiftBloc_Example.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_MODULES = YES;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_WEAK = NO;
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
@@ -493,6 +473,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = "Target Support Files/Pods-SwiftBloc_Example/Pods-SwiftBloc_Example-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-SwiftBloc_Example/Pods-SwiftBloc_Example.modulemap";
@@ -503,6 +484,71 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		793F619D33DBC12349562FC2F461567B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 61F0D509920F6BBEF4BF2C6C838F033B /* Pods-SwiftBloc_Tests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-SwiftBloc_Tests/Pods-SwiftBloc_Tests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-SwiftBloc_Tests/Pods-SwiftBloc_Tests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		7D9CBCEC72E53C454608A64CF2306E74 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B9FE1EA11ED4AE3E59AFF08746C5C332 /* SwiftBloc.release.xcconfig */;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/SwiftBloc/SwiftBloc-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SwiftBloc/SwiftBloc-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/SwiftBloc/SwiftBloc.modulemap";
+				PRODUCT_MODULE_NAME = SwiftBloc;
+				PRODUCT_NAME = SwiftBloc;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
@@ -511,7 +557,7 @@
 			};
 			name = Release;
 		};
-		25AD9454612BF454A1E3DC4CD4FA8C6D /* Debug */ = {
+		8DE5143C03248BB6CD542DE3963D6F3A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -577,10 +623,12 @@
 			};
 			name = Debug;
 		};
-		3A74E7834831A70CA7CB58C92228AEE2 /* Release */ = {
+		92061E3C81A47FF5C390EAF848B71D54 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 143519F468D5AD38F92403386DDD2DBD /* SwiftBloc.release.xcconfig */;
+			baseConfigurationReference = F015FC43764E26BF6C01713B4F15C2D9 /* SwiftBloc.debug.xcconfig */;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_WEAK = NO;
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
@@ -592,6 +640,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/SwiftBloc/SwiftBloc-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/SwiftBloc/SwiftBloc-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/SwiftBloc/SwiftBloc.modulemap";
 				PRODUCT_MODULE_NAME = SwiftBloc;
@@ -601,17 +650,18 @@
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
-			name = Release;
+			name = Debug;
 		};
-		486CB3C353CFD89171EA097772286438 /* Release */ = {
+		96D55D9E96E10567237AF598D6F49EA5 /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 1F117E2411164C1C4BA6EB1153346C70 /* Pods-SwiftBloc_Tests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_WEAK = NO;
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
@@ -622,6 +672,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = "Target Support Files/Pods-SwiftBloc_Tests/Pods-SwiftBloc_Tests-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-SwiftBloc_Tests/Pods-SwiftBloc_Tests.modulemap";
@@ -639,72 +690,7 @@
 			};
 			name = Release;
 		};
-		92D03C89DCAB4D1A2A367DAAFEF9B5AA /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 778D99C505E05AE27D7B3010FD98CB5A /* Pods-SwiftBloc_Example.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_MODULES = YES;
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-SwiftBloc_Example/Pods-SwiftBloc_Example-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-SwiftBloc_Example/Pods-SwiftBloc_Example.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		9FC8BC4CEFB3206582846730169475B8 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 61F0D509920F6BBEF4BF2C6C838F033B /* Pods-SwiftBloc_Tests.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-SwiftBloc_Tests/Pods-SwiftBloc_Tests-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-SwiftBloc_Tests/Pods-SwiftBloc_Tests.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		CA547D2C7E9A8A153DC2B27FBE00B112 /* Release */ = {
+		9E406C6AAF85E580207CD97B0044DEAB /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -765,10 +751,13 @@
 			};
 			name = Release;
 		};
-		CC0972BED2C124E6ACF021E16DF83EE3 /* Debug */ = {
+		FD4A39DBC5E00CE38CC10805A078F13D /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1C9A01DBA47458C98DD047C3C3728341 /* SwiftBloc.debug.xcconfig */;
+			baseConfigurationReference = 6FCDE2307D6C34E367D25226FD00A56D /* Pods-SwiftBloc_Example.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_WEAK = NO;
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
@@ -777,22 +766,25 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/SwiftBloc/SwiftBloc-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/SwiftBloc/SwiftBloc-Info.plist";
+				INFOPLIST_FILE = "Target Support Files/Pods-SwiftBloc_Example/Pods-SwiftBloc_Example-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/SwiftBloc/SwiftBloc.modulemap";
-				PRODUCT_MODULE_NAME = SwiftBloc;
-				PRODUCT_NAME = SwiftBloc;
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-SwiftBloc_Example/Pods-SwiftBloc_Example.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
-			name = Debug;
+			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
@@ -800,8 +792,17 @@
 		198436A655C0AEA2D271C03DED89995A /* Build configuration list for PBXNativeTarget "Pods-SwiftBloc_Example" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				92D03C89DCAB4D1A2A367DAAFEF9B5AA /* Debug */,
-				03E3011A2FEC401C25693C29797D7FB5 /* Release */,
+				3678EDCB2417D7956CE72A8C7B6E7CF0 /* Debug */,
+				FD4A39DBC5E00CE38CC10805A078F13D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		481699B5BBEDCB43B6AE92BD21A57F97 /* Build configuration list for PBXNativeTarget "SwiftBloc" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				92061E3C81A47FF5C390EAF848B71D54 /* Debug */,
+				7D9CBCEC72E53C454608A64CF2306E74 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -809,17 +810,8 @@
 		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				25AD9454612BF454A1E3DC4CD4FA8C6D /* Debug */,
-				CA547D2C7E9A8A153DC2B27FBE00B112 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		BA763A0AAFFBA92BE77FD6E9FA5FDF94 /* Build configuration list for PBXNativeTarget "SwiftBloc" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				CC0972BED2C124E6ACF021E16DF83EE3 /* Debug */,
-				3A74E7834831A70CA7CB58C92228AEE2 /* Release */,
+				8DE5143C03248BB6CD542DE3963D6F3A /* Debug */,
+				9E406C6AAF85E580207CD97B0044DEAB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -827,8 +819,8 @@
 		DB2C6CE1D7729CA4F051E7B5D555F019 /* Build configuration list for PBXNativeTarget "Pods-SwiftBloc_Tests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				9FC8BC4CEFB3206582846730169475B8 /* Debug */,
-				486CB3C353CFD89171EA097772286438 /* Release */,
+				793F619D33DBC12349562FC2F461567B /* Debug */,
+				96D55D9E96E10567237AF598D6F49EA5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

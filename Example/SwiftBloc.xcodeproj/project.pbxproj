@@ -55,6 +55,9 @@
 		607FACE51AFB9204008FA782 /* SwiftBloc_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftBloc_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
+		781BBBCC25F10EF5004BFE64 /* CHANGELOG.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; name = CHANGELOG.md; path = ../CHANGELOG.md; sourceTree = "<group>"; };
+		781BBBCD25F10F11004BFE64 /* CODE_OF_CONDUCT.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; name = CODE_OF_CONDUCT.md; path = ../CODE_OF_CONDUCT.md; sourceTree = "<group>"; };
+		781BBBCE25F10F11004BFE64 /* CONTRIBUTING.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; name = CONTRIBUTING.md; path = ../CONTRIBUTING.md; sourceTree = "<group>"; };
 		82EC3EC02FB63CEFC4EA0403 /* Pods_SwiftBloc_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftBloc_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -165,6 +168,9 @@
 				38797A32A7A64087ED6DF513 /* SwiftBloc.podspec */,
 				0DD499F2FF4B6CDD3A8F0679 /* README.md */,
 				03ED00AF75438BCB8C629F90 /* LICENSE */,
+				781BBBCC25F10EF5004BFE64 /* CHANGELOG.md */,
+				781BBBCD25F10F11004BFE64 /* CODE_OF_CONDUCT.md */,
+				781BBBCE25F10F11004BFE64 /* CONTRIBUTING.md */,
 			);
 			name = "Podspec Metadata";
 			sourceTree = "<group>";
