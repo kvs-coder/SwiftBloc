@@ -65,7 +65,7 @@ public struct BlocView<C: Cubit<S>, S: Equatable, Content: View>: BlocViewProtoc
     /**
      BlocView constructor
      - parameter builder: builder callback.
-     - parameter action: custom action callback
+     - parameter action: custom action callback. Optional
      - parameter cubit: cubit/bloc instance..
      */
     public init(
