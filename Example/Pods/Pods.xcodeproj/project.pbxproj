@@ -55,7 +55,7 @@
 		047EC4E025EB98430004C90C /* Change.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Change.swift; sourceTree = "<group>"; };
 		047EC4E125EB98430004C90C /* Transition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Transition.swift; sourceTree = "<group>"; };
 		047EC4E225EB98430004C90C /* Cubit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cubit.swift; sourceTree = "<group>"; };
-		04EB15FE25EAC9AF008E0030 /* CHANGELOG.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; name = CHANGELOG.md; path = ../HealthKitReporter/CHANGELOG.md; sourceTree = "<group>"; };
+		0485BB5B25F1090300626B7D /* CHANGELOG.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = CHANGELOG.md; sourceTree = "<group>"; };
 		04EB15FF25EAC9AF008E0030 /* CODE_OF_CONDUCT.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; name = CODE_OF_CONDUCT.md; path = ../HealthKitReporter/CODE_OF_CONDUCT.md; sourceTree = "<group>"; };
 		04EB160025EAC9AF008E0030 /* CONTRIBUTING.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; name = CONTRIBUTING.md; path = ../HealthKitReporter/CONTRIBUTING.md; sourceTree = "<group>"; };
 		143519F468D5AD38F92403386DDD2DBD /* SwiftBloc.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftBloc.release.xcconfig; sourceTree = "<group>"; };
@@ -268,7 +268,7 @@
 		FFDA1305F8CE6E5AB362CDB918F874C2 /* Pod */ = {
 			isa = PBXGroup;
 			children = (
-				04EB15FE25EAC9AF008E0030 /* CHANGELOG.md */,
+				0485BB5B25F1090300626B7D /* CHANGELOG.md */,
 				04EB15FF25EAC9AF008E0030 /* CODE_OF_CONDUCT.md */,
 				04EB160025EAC9AF008E0030 /* CONTRIBUTING.md */,
 				DB3DFBA00DEC66A9EE7260C80EAE8DFB /* LICENSE */,
