@@ -7,13 +7,15 @@
 
 import Foundation
 
+/**
+ Change class for tracking state changes
+*/
 public class Change<State> {
-    let currentState: State
-    
-    let nextState: State
+    public let currentState: State
+    public let nextState: State
     
     var description: String {
-        return "Change currentState: \(currentState), nextState: \(nextState) }"
+        "Change currentState: \(currentState) to nextState: \(nextState)"
     }
     
     init(currentState: State, nextState: State) {

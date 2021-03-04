@@ -8,11 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		03DBDA358AC2B1CEB57877AED990392A /* Pods-SwiftBloc_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = F0FA8C740C38B77B7CEB65E90AFA34D8 /* Pods-SwiftBloc_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		042B050F25F0036E001777C6 /* BlocProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042B050E25F0036E001777C6 /* BlocProvider.swift */; };
+		0416FEAB25F0DA08006CB073 /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0416FEAA25F0DA08006CB073 /* Errors.swift */; };
 		042B051125F01B3F001777C6 /* BlocView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042B051025F01B3F001777C6 /* BlocView.swift */; };
-		043EE4E325EC2A7200FAE1E8 /* BlocBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043EE4E225EC2A7200FAE1E8 /* BlocBuilder.swift */; };
-		047A7BBF25ED827000228011 /* BlocListener.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047A7BBE25ED827000228011 /* BlocListener.swift */; };
-		047A7BC125ED952900228011 /* BlocConsumer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047A7BC025ED952900228011 /* BlocConsumer.swift */; };
+		042D4DAB25F0E595002962C7 /* Extensions+View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042D4DAA25F0E595002962C7 /* Extensions+View.swift */; };
 		047EC4E325EB98430004C90C /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047EC4DC25EB98430004C90C /* Log.swift */; };
 		047EC4E425EB98430004C90C /* Bloc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047EC4DD25EB98430004C90C /* Bloc.swift */; };
 		047EC4E525EB98430004C90C /* BlocObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047EC4DE25EB98430004C90C /* BlocObserver.swift */; };
@@ -48,11 +46,9 @@
 
 /* Begin PBXFileReference section */
 		028049482854BEC4E733ED6BBCA44E3D /* Pods-SwiftBloc_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-SwiftBloc_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
-		042B050E25F0036E001777C6 /* BlocProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlocProvider.swift; sourceTree = "<group>"; };
+		0416FEAA25F0DA08006CB073 /* Errors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Errors.swift; sourceTree = "<group>"; };
 		042B051025F01B3F001777C6 /* BlocView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlocView.swift; sourceTree = "<group>"; };
-		043EE4E225EC2A7200FAE1E8 /* BlocBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlocBuilder.swift; sourceTree = "<group>"; };
-		047A7BBE25ED827000228011 /* BlocListener.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlocListener.swift; sourceTree = "<group>"; };
-		047A7BC025ED952900228011 /* BlocConsumer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlocConsumer.swift; sourceTree = "<group>"; };
+		042D4DAA25F0E595002962C7 /* Extensions+View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extensions+View.swift"; sourceTree = "<group>"; };
 		047EC4DC25EB98430004C90C /* Log.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Log.swift; sourceTree = "<group>"; };
 		047EC4DD25EB98430004C90C /* Bloc.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Bloc.swift; sourceTree = "<group>"; };
 		047EC4DE25EB98430004C90C /* BlocObserver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlocObserver.swift; sourceTree = "<group>"; };
@@ -123,19 +119,33 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0416FEAC25F0DB50006CB073 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				047EC4E025EB98430004C90C /* Change.swift */,
+				047EC4E125EB98430004C90C /* Transition.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		042D4DA925F0E57E002962C7 /* Decorator */ = {
+			isa = PBXGroup;
+			children = (
+				042D4DAA25F0E595002962C7 /* Extensions+View.swift */,
+			);
+			path = Decorator;
+			sourceTree = "<group>";
+		};
 		047EC4DB25EB98430004C90C /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				042D4DA925F0E57E002962C7 /* Decorator */,
+				0416FEAC25F0DB50006CB073 /* Model */,
 				047EC4DC25EB98430004C90C /* Log.swift */,
-				047EC4DD25EB98430004C90C /* Bloc.swift */,
+				0416FEAA25F0DA08006CB073 /* Errors.swift */,
 				042B051025F01B3F001777C6 /* BlocView.swift */,
-				043EE4E225EC2A7200FAE1E8 /* BlocBuilder.swift */,
-				047A7BBE25ED827000228011 /* BlocListener.swift */,
-				047A7BC025ED952900228011 /* BlocConsumer.swift */,
 				047EC4DE25EB98430004C90C /* BlocObserver.swift */,
-				042B050E25F0036E001777C6 /* BlocProvider.swift */,
-				047EC4E025EB98430004C90C /* Change.swift */,
-				047EC4E125EB98430004C90C /* Transition.swift */,
+				047EC4DD25EB98430004C90C /* Bloc.swift */,
 				047EC4E225EB98430004C90C /* Cubit.swift */,
 			);
 			name = Classes;
@@ -423,13 +433,11 @@
 				047EC4E825EB98430004C90C /* Transition.swift in Sources */,
 				047EC4E425EB98430004C90C /* Bloc.swift in Sources */,
 				047EC4E325EB98430004C90C /* Log.swift in Sources */,
-				047A7BC125ED952900228011 /* BlocConsumer.swift in Sources */,
 				042B051125F01B3F001777C6 /* BlocView.swift in Sources */,
-				043EE4E325EC2A7200FAE1E8 /* BlocBuilder.swift in Sources */,
 				047EC4E925EB98430004C90C /* Cubit.swift in Sources */,
-				047A7BBF25ED827000228011 /* BlocListener.swift in Sources */,
+				0416FEAB25F0DA08006CB073 /* Errors.swift in Sources */,
+				042D4DAB25F0E595002962C7 /* Extensions+View.swift in Sources */,
 				E10ADFCE3DAA515D1C53BA5D867ADB51 /* SwiftBloc-dummy.m in Sources */,
-				042B050F25F0036E001777C6 /* BlocProvider.swift in Sources */,
 				047EC4E525EB98430004C90C /* BlocObserver.swift in Sources */,
 				047EC4E725EB98430004C90C /* Change.swift in Sources */,
 			);

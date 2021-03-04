@@ -23,7 +23,13 @@ struct BlocContentView: View {
                     OperationView()
                 }
             }
-        }, listener: { (state) in
+            .alert(isPresented: self.$isAlertCalled) {
+                Alert(title: Text("Hi"), message: Text("Message"), dismissButton: .cancel({
+                    self.bloc.add(event: .increment)
+                    self.bloc.add(event: .increment)
+                }))
+            }
+        }, action: { (state) in
             print(state.count)
             if state.count < -1 {
                 DispatchQueue.main.async {
@@ -31,12 +37,6 @@ struct BlocContentView: View {
                 }
             }
         }, cubit: bloc)
-        .alert(isPresented: $isAlertCalled) {
-            Alert(title: Text("Hi"), message: Text("Message"), dismissButton: .cancel({
-                self.bloc.add(event: .increment)
-                self.bloc.add(event: .increment)
-            }))
-        }
     }
 }
 

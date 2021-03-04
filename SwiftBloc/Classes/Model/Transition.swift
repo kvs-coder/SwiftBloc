@@ -7,9 +7,16 @@
 
 import Foundation
 
+/**
+ A transition which tracks states based on incoming events
+*/
 public class Transition<Event, State>: Change<State> {
-    let event: Event
-    
+    public let event: Event
+
+    override var description: String {
+        "Event: \(event) transition from currentState: \(currentState) to nextState: \(nextState)"
+    }
+
     init(
         currentState: State,
         event: Event,
@@ -19,9 +26,9 @@ public class Transition<Event, State>: Change<State> {
         super.init(currentState: currentState, nextState: nextState)
     }
 }
-
-public extension Transition where State: Equatable, Event: Equatable {
-    static func == (lhs: Transition<Event, State>, rhs: Transition<Event, State>) -> Bool {
+// MARK: - Equatable
+extension Transition where State: Equatable, Event: Equatable {
+    public static func == (lhs: Transition<Event, State>, rhs: Transition<Event, State>) -> Bool {
         lhs.currentState == rhs.currentState && lhs.nextState == rhs.nextState && lhs.event == rhs.event
     }
 }
