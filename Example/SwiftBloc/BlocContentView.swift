@@ -24,9 +24,13 @@ struct BlocContentView: View {
                 }
             }
             .alert(isPresented: self.$isAlertCalled) {
-                Alert(title: Text("Hi"), message: Text("Message"), dismissButton: .cancel({
-                    self.bloc.add(event: .increment)
-                }))
+                Alert(
+                    title: Text("Hi"),
+                    message: Text("Message"),
+                    dismissButton: .cancel {
+                        self.bloc.add(event: .increment)
+                    }
+                )
             }
         }, action: { (state) in
             print(state.count)
