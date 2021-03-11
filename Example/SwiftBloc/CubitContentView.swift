@@ -10,24 +10,22 @@ import SwiftBloc
 import SwiftUI
 
 struct CubitContentView: View {
-    @ObservedObject var cubit = CounterCubit()
-
     var body: some View {
-        BlocView(builder: { (state)  in
+        BlocView(builder: { (cubit, state)  in
             VStack {
                 Button(action: {
-                    self.cubit.increment()
+                    cubit.increment()
                 }, label: {
                     Text("Increment")
                 })
                 Button(action: {
-                    self.cubit.decrement()
+                    cubit.decrement()
                 }, label: {
                     Text("Decrement")
                 })
                 Text("Count: \(state)")
             }
-        }, cubit: cubit)
+        }, cubit: CounterCubit())
     }
 }
 

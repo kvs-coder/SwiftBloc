@@ -10,12 +10,10 @@ import SwiftUI
 import SwiftBloc
 
 struct BlocContentView: View {
-    @ObservedObject var bloc = CounterBloc()
-
     @State var isAlertCalled = false
 
     var body: some View {
-        BlocView(builder: { (state) in
+        BlocView(builder: { (bloc, state) in
             VStack {
                 if state.count > 5 {
                     LimitView()
@@ -25,17 +23,17 @@ struct BlocContentView: View {
             }
             .alert(isPresented: self.$isAlertCalled) {
                 Alert(title: Text("Hi"), message: Text("Message"), dismissButton: .cancel({
-                    self.bloc.add(event: .increment)
+                    bloc.add(event: .increment)
                 }))
             }
-        }, action: { (state) in
+        }, action: { (_, state) in
             print(state.count)
             if state.count < -1 {
                 DispatchQueue.main.async {
                     self.isAlertCalled = true
                 }
             }
-        }, cubit: bloc)
+        }, cubit: CounterBloc())
     }
 }
 
