@@ -12,9 +12,9 @@ to separate views and buisiness logic. With the help of Apple Library "Combine" 
 
 At first you need to decide what approach is more suitable for your app. 
 
-If you prefer to make something simple and make changes without depending on what event was currently hapening you could use a **Cubit** class to create your child cubit and handle state there.
+If you prefer to make something simple and make changes without depending on what event is currently hapening you could use a **Cubit** class to create your child cubit and handle state there.
 
-If you would need more complex implementation to track events and map them to states then **Bloc** class is the choice.
+If you would need more complex implementation to track events and map them into states then **Bloc** class is the choice.
 
 In both scenarios you may also need to create inside your custom **View** structure a **BlocView** instance which will accept your newly created cubit/bloc in the initializer and also will require a **@ViewBuilder** builder function to be provided as well. The idea of the **BlocView** is to handle rebuilding your views inside the **builder** callback based on the current state. Whenever the state is changed your view gets rebuild. 
 
@@ -45,7 +45,7 @@ class CounterCubit: Cubit<Int> {
     }
     func decrement() {
          emit(state: state - 1)
-     }
+    }
 }
 ```
 
