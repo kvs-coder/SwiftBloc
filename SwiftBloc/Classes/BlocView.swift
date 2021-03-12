@@ -43,7 +43,7 @@ public struct BlocView<C: Cubit<S>, S: Equatable, Content: View>: BlocViewProtoc
      Extract the current state from a cubit/bloc
      */
     private var state: S {
-        return cubit.state
+        cubit.state
     }
     /**
      @ViewBuilder callback. Builds views based on the state
