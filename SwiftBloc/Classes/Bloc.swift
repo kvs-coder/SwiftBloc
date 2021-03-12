@@ -61,7 +61,7 @@ open class Bloc<Event, State>: Cubit<State> where State: Equatable, Event: Equat
      */
     private func bindEventsToStates() {
         $event
-            .compactMap ({ [unowned self] (event) -> Transition<Event, State>? in
+            .compactMap({ [unowned self] (event) -> Transition<Event, State>? in
                 guard let event = event else {
                     self.observer.onError(cubit: self, error: BlocError.noEvent)
                     return nil
@@ -73,7 +73,7 @@ open class Bloc<Event, State>: Cubit<State> where State: Equatable, Event: Equat
                     nextState: nextState
                 )
             })
-            .map ({ [unowned self] (transition) -> State in
+            .map({ [unowned self] (transition) -> State in
                 if transition.nextState == self.state && self.emitted {
                     self.observer.onError(cubit: self, error: CubitError.stateNotChanged)
                     return self.state
