@@ -13,9 +13,9 @@ struct BlocContentView: View {
     @State var isAlertCalled = false
 
     var body: some View {
-        BlocView(builder: { (bloc, state) in
+        BlocView(builder: { (bloc) in
             VStack {
-                if state.count > 5 {
+                if bloc.state.count > 5 {
                     LimitView()
                 } else {
                     OperationView()
@@ -30,9 +30,8 @@ struct BlocContentView: View {
                     }
                 )
             }
-        }, action: { (_, state) in
-            print(state.count)
-            if state.count < -1 {
+        }, action: { (bloc) in
+            if bloc.state.count < -1 {
                 DispatchQueue.main.async {
                     self.isAlertCalled = true
                 }

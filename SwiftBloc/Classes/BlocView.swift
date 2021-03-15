@@ -12,12 +12,12 @@ import SwiftUI
  - parameter state: current state.
  - returns: content view
  */
-public typealias BlocViewBuilder<C: Cubit<S>, S: Equatable, Content: View> = (_ cubit: C, _ state: S) -> Content
+public typealias BlocViewBuilder<C: Cubit<S>, S: Equatable, Content: View> = (_ cubit: C) -> Content
 /**
  BlocViewAction
  - parameter state: current state.
  */
-public typealias BlocViewAction<C: Cubit<S>, S: Equatable> = (_ cubit: C, _ state: S) -> Void
+public typealias BlocViewAction<C: Cubit<S>, S: Equatable> = (_ cubit: C) -> Void
 /**
  A general protocol for the **BlocView** class.
  */
@@ -28,7 +28,7 @@ protocol BlocViewProtocol: View {
 
     var cubit: C { get }
 
-    func build(cubit: C, state: S) -> Content
+    func build(cubit: C) -> Content
 }
 /**
  A wrapper for a **View** conforming view providing BloC instance as **EnvironmentObject**.
@@ -58,8 +58,8 @@ public struct BlocView<C: Cubit<S>, S: Equatable, Content: View>: BlocViewProtoc
      is wrapped in **ObservedObject** property wrapper in your View.
      */
     public var body: some View {
-        build(cubit: cubit, state: state)
-            .listen(cubit: cubit, state: state, action: action)
+        build(cubit: cubit)
+            .listen(cubit: cubit, action: action)
             .environmentObject(cubit)
     }
     /**
@@ -82,7 +82,7 @@ public struct BlocView<C: Cubit<S>, S: Equatable, Content: View>: BlocViewProtoc
      - parameter state: current state.
      - returns: content view
      */
-    func build(cubit: C, state: S) -> Content {
-        builder(cubit, state)
+    func build(cubit: C) -> Content {
+        builder(cubit)
     }
 }
