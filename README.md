@@ -51,63 +51,31 @@ class CounterCubit: Cubit<Int> {
 
 Next you need to use it in your views.
 
-Take a look on the next example without wrapping in a **BlocView**.
+Since our **State**generic state is **Int** we can directly access to an integer getter **state** and display in in the text.
 
-```swift 
-struct CubitContentView: View {
-    @ObservedObject var cubit = CounterCubit()
+Next, inside your **body** property create a **BlocView** with some content:
 
-    var body: some View {
+```swift
+var body: some View {
+    BlocView(builder: { (cubit)  in
         VStack {
             Button(action: {
-                self.cubit.increment()
+                cubit.increment()
             }, label: {
                 Text("Increment")
             })
             Button(action: {
-                self.cubit.decrement()
+                cubit.decrement()
             }, label: {
                 Text("Decrement")
             })
             Text("Count: \(cubit.state)")
         }
-    }
-}
-
-struct CubitContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        CubitContentView()
-    }
+    }, cubit: CounterCubit())
 }
 ```
 
-It is important the the **cubit** instance is wrapped inside **@ObservedObject** property wrapper because the **Cubit** class is monitoring the changes of the **state** property via **@PublishedSubject** property wrapper.
-
-Since our **State**generic state is **Int** we can directly access to an integer getter **state** and display in in the text.
-
-If you want to wrap your **view** in your **body** in a **BlocView** it is done like this:
-
-```swift
-var body: some View {
-    BlocView(builder: { (state)  in
-        VStack {
-            Button(action: {
-                self.cubit.increment()
-            }, label: {
-                Text("Increment")
-            })
-            Button(action: {
-                self.cubit.decrement()
-            }, label: {
-                Text("Decrement")
-            })
-            Text("Count: \(state)")
-        }
-    }, cubit: cubit)
-}
-```
-
-In this case you may use **state** directly from a **builder** in order to redruce a getter call from **cubit**. Moreover the benefit of this approach will let to use your **cubit** instance as an **@EnvironmentObject** so every child **view** inside your **builder** function will get the instance of **cubit** without a need "to drill" through the whole view tree.
+In this case you may use **cubit** directly from a **builder**. Moreover this approach will let to use your **cubit** instance as an **@EnvironmentObject** so every child **view** inside your **builder** function will get the instance of **cubit** without a need "to drill" through the whole view tree.
 
 ### Bloc
 
@@ -120,6 +88,8 @@ The difference between **Cubit** and **Bloc** although the **Bloc** is a child c
 As a simple example the **CounterBloc**
 
 ```swift
+import SwiftBloc
+
 enum CounterEvent {
     case increment
     case decrement
@@ -173,33 +143,33 @@ Now let's see what is the view looks like:
 import SwiftBloc
 
 struct BlocContentView: View {
-    @ObservedObject var bloc = CounterBloc()
-
     @State var isAlertCalled = false
 
     var body: some View {
-        BlocView(builder: { (state) in
+        BlocView(builder: { (bloc) in
             VStack {
-                if state.count > 5 {
+                if bloc.state.count > 5 {
                     LimitView()
                 } else {
                     OperationView()
                 }
             }
             .alert(isPresented: self.$isAlertCalled) {
-                Alert(title: Text("Hi"), message: Text("Message"), dismissButton: .cancel({
-                    self.bloc.add(event: .increment)
-                    self.bloc.add(event: .increment)
-                }))
+                Alert(
+                    title: Text("Hi"),
+                    message: Text("Message"),
+                    dismissButton: .cancel {
+                        bloc.add(event: .increment)
+                    }
+                )
             }
-        }, action: { (state) in
-            print(state.count)
-            if state.count < -1 {
+        }, action: { (bloc) in
+            if bloc.state.count < -1 {
                 DispatchQueue.main.async {
                     self.isAlertCalled = true
                 }
             }
-        }, cubit: bloc)
+        }, cubit: CounterBloc())
     }
 }
 
@@ -242,15 +212,9 @@ struct OperationView: View {
         }
     }
 }
-
-struct BlocContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        BlocContentView()
-    }
-}
 ```
 
-Again it is important the the **bloc** instance is wrapped inside **@ObservedObject** property wrapper because the **Bloc** class is monitoring the changes of the **event** property via **@PublishedSubject** property wrapper. This **bloc** instance is set by default as **@EnvironmentObject** and will be available for all child views if needed.
+The **Bloc** class is monitoring the changes of the **event** property via **@PublishedSubject** property wrapper. This **bloc** instance is set by default as **@EnvironmentObject** and will be available for all child views if needed.
 
 ## Example
 
