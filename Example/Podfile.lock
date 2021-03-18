@@ -1,0 +1,16 @@
+PODS:
+  - SwiftBloc (1.0.0)
+
+DEPENDENCIES:
+  - SwiftBloc (from `../`)
+
+EXTERNAL SOURCES:
+  SwiftBloc:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  SwiftBloc: 31aad2949ccfe3de54a447868f489c697ef00428
+
+PODFILE CHECKSUM: a328c1d5c47373468c0f027e420b98fc6ea4155e
+
+COCOAPODS: 1.10.1

@@ -1,0 +1,6 @@
+framework module SwiftBloc {
+  umbrella header "SwiftBloc-umbrella.h"
+
+  export *
+  module * { export * }
+}

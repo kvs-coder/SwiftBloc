@@ -238,7 +238,7 @@ pod 'SwiftBloc'
 or 
 
 ```ruby
-pod 'SwiftBloc', '~> 1.0.0'
+pod 'SwiftBloc', '~> 1.0.1'
 ```
 
 ### Swift Package Manager
@@ -248,7 +248,7 @@ To install it, simply add the following lines to your Package.swift file
 
 ```swift
 dependencies: [
-    .package(url: "https://github.com/VictorKachalov/SwiftBloc.git", from: "1.0.0")
+    .package(url: "https://github.com/VictorKachalov/SwiftBloc.git", from: "1.0.1")
 ]
 ```
 
@@ -257,7 +257,7 @@ dependencies: [
 Add the line in your cartfile 
 
 ```ruby
-github "VictorKachalov/SwiftBloc" "1.0.0"
+github "VictorKachalov/SwiftBloc" "1.0.1"
 ```
 
 ## Author
