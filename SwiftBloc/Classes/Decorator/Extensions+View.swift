@@ -8,8 +8,11 @@
 import SwiftUI
 
 extension View {
-    func listen<S>(state: S, action: BlocViewAction<S>?) -> some View {
-        action?(state)
+    func listen<C: Cubit<S>, S: Equatable>(
+        cubit: C,
+        action: BlocViewAction<C, S>?
+    ) -> some View {
+        action?(cubit)
         return self
     }
 }
