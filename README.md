@@ -22,6 +22,23 @@ You can manipaulate with state as you want. In addition you can also provide to 
 
 By default all changes are tracked by a shared instance of **BlocObserver** and currently only make console printing. You can always set a custom observer for the shared instance and override open methods as you wish.
 
+For convinience you can use a ruby script *bloc_template.rb*. You need to provide additional parameters for executing the script.
+- path
+- class_name
+- type
+
+Example:
+
+```ruby
+# creates a cubit
+ruby bloc_template /MY_PROJECT/MY_CUBIT_FOLDER Counter cubit
+```
+
+```ruby
+# creates a bloc
+ruby bloc_template /MY_PROJECT/MY_CUBIT_FOLDER Counter bloc
+```
+
 ### Cubit
 
 If you go with **Cubit** first you need to create a child class. The generic type **State** can be any type which conforms **Equitable** protocol.
