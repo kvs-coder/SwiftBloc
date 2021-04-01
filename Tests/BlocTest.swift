@@ -7,6 +7,6 @@
 
 import Foundation
 
-//class BlocTest<B: Cubit<S>> where S: Equatable {
-//    
-//}
+class BlocTest: BlocBase {
+    
+}

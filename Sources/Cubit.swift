@@ -10,7 +10,7 @@ import Combine
 /**
  A state managing class not depending on incoming events.
  */
-open class Cubit<State>: BlocBase<State> where State: Equatable {
+open class Cubit<State>: Base<State> where State: Equatable {
     /**
      Emits a new state.
      - parameter state: new state.

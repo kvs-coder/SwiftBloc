@@ -19,7 +19,7 @@
 		040107C026161FB8002A0B98 /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040107B626161FB8002A0B98 /* Errors.swift */; };
 		040107C126161FB8002A0B98 /* Cubit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040107B726161FB8002A0B98 /* Cubit.swift */; };
 		040107CA26161FFD002A0B98 /* BlocTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040107C926161FFD002A0B98 /* BlocTest.swift */; };
-		040107D226162211002A0B98 /* BlocBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040107D126162211002A0B98 /* BlocBase.swift */; };
+		040107D226162211002A0B98 /* Base.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040107D126162211002A0B98 /* Base.swift */; };
 		05F4FF942A235E2AA5B05F9AD98A3279 /* Pods-SwiftBloc_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 45000D8553DE4F4298F778F24BEFF4DE /* Pods-SwiftBloc_Example-dummy.m */; };
 		11A6C0A3AD6CC6835E8AD26375A46B6A /* Pods-SwiftBloc_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 719F4927296DCBB3598D184EB805989D /* Pods-SwiftBloc_Tests-dummy.m */; };
 		5FEDBDDB81C5A993CA38641862B22BEA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
@@ -62,7 +62,7 @@
 		040107B626161FB8002A0B98 /* Errors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Errors.swift; sourceTree = "<group>"; };
 		040107B726161FB8002A0B98 /* Cubit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cubit.swift; sourceTree = "<group>"; };
 		040107C926161FFD002A0B98 /* BlocTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlocTest.swift; sourceTree = "<group>"; };
-		040107D126162211002A0B98 /* BlocBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlocBase.swift; sourceTree = "<group>"; };
+		040107D126162211002A0B98 /* Base.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Base.swift; sourceTree = "<group>"; };
 		1F117E2411164C1C4BA6EB1153346C70 /* Pods-SwiftBloc_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SwiftBloc_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		2563CC670C55532B2DC021EA47417DCB /* Pods_SwiftBloc_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftBloc_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		284432E908669F9F167E855699CDD9F6 /* SwiftBloc.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftBloc.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -126,7 +126,7 @@
 			isa = PBXGroup;
 			children = (
 				040107AC26161FB8002A0B98 /* BlocView.swift */,
-				040107D126162211002A0B98 /* BlocBase.swift */,
+				040107D126162211002A0B98 /* Base.swift */,
 				040107AE26161FB8002A0B98 /* Bloc.swift */,
 				040107B126161FB8002A0B98 /* BlocObserver.swift */,
 				040107B726161FB8002A0B98 /* Cubit.swift */,
@@ -449,7 +449,7 @@
 				040107B826161FB8002A0B98 /* BlocView.swift in Sources */,
 				040107BE26161FB8002A0B98 /* Change.swift in Sources */,
 				983D605EF7B52088F2CBF5AF0FA2C315 /* SwiftBloc-dummy.m in Sources */,
-				040107D226162211002A0B98 /* BlocBase.swift in Sources */,
+				040107D226162211002A0B98 /* Base.swift in Sources */,
 				040107CA26161FFD002A0B98 /* BlocTest.swift in Sources */,
 				040107C126161FB8002A0B98 /* Cubit.swift in Sources */,
 				040107C026161FB8002A0B98 /* Errors.swift in Sources */,

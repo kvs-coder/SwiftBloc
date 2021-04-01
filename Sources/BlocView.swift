@@ -12,18 +12,18 @@ import SwiftUI
  - parameter state: current state.
  - returns: content view
  */
-public typealias BlocViewBuilder<B: BlocBase<S>, S: Equatable, Content: View> = (_ base: B) -> Content
+public typealias BlocViewBuilder<B: Base<S>, S: Equatable, Content: View> = (_ base: B) -> Content
 /**
  BlocViewAction
  - parameter state: current state.
  */
-public typealias BlocViewAction<B: BlocBase<S>, S: Equatable> = (_ base: B) -> Void
+public typealias BlocViewAction<B: Base<S>, S: Equatable> = (_ base: B) -> Void
 /**
  A general protocol for the **BlocView** class.
  */
 protocol BlocViewProtocol: View {
     associatedtype S where S: Equatable
-    associatedtype B where B: BlocBase<S>
+    associatedtype B where B: Base<S>
     associatedtype Content where Content: View
 
     var base: B { get }
@@ -34,7 +34,7 @@ protocol BlocViewProtocol: View {
  A wrapper for a **View** conforming view providing BloC instance as **EnvironmentObject**.
  Expects **Cubit** (**Bloc** as well) conforming BloC component with **Equatable** state object.
  */
-public struct BlocView<B: BlocBase<S>, S: Equatable, Content: View>: BlocViewProtocol  {
+public struct BlocView<B: Base<S>, S: Equatable, Content: View>: BlocViewProtocol  {
     /**
      A cubit/bloc property which holds the custom buisiness logic
      */

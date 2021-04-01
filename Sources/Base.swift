@@ -1,5 +1,5 @@
 //
-//  BlocBase.swift
+//  Base.swift
 //  SwiftBloc
 //
 //  Created by Kachalov, Victor on 01.04.21.
@@ -10,7 +10,7 @@ import Combine
 /**
  A state managing base class.
  */
-open class BlocBase<State>: ObservableObject where State: Equatable {
+open class Base<State>: ObservableObject where State: Equatable {
     /**
      Whenever a state will be changed, the instance of the **Cubit** wrapped in **ObservedObject** in your **View** structure will recieve
      a new value of state. Based on this you can set the strict dependency of how to build your views.

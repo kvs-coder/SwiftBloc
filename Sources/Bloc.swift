@@ -12,7 +12,7 @@ import Combine
 /**
  A state managing class with lower level of abstraction and unlike **Cubit** it depends on incoming events.
  */
-open class Bloc<Event, State>: BlocBase<State> where State: Equatable, Event: Equatable {
+open class Bloc<Event, State>: Base<State> where State: Equatable, Event: Equatable {
     /**
      Whenever a new event happens, the instance of the **Bloc** wrapped in **ObservedObject**  in your **View** structure will recieve
      a new value of event..

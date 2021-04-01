@@ -8,7 +8,7 @@
 import SwiftUI
 
 extension View {
-    func listen<B: BlocBase<S>, S: Equatable>(
+    func listen<B: Base<S>, S: Equatable>(
         base: B,
         action: BlocViewAction<B, S>?
     ) -> some View {
