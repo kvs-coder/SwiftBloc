@@ -21,6 +21,9 @@ let package = Package(
         .target(
             name: "SwiftBloc",
             path: "Sources"),
+        .testTarget(
+            name: "SwiftBlocTests",
+            path: "Tests"),
     ]
 )
 
