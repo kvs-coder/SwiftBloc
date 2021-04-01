@@ -36,7 +36,7 @@ struct BlocContentView: View {
                     self.isAlertCalled = true
                 }
             }
-        }, cubit: CounterBloc())
+        }, base: CounterBloc())
     }
 }
 

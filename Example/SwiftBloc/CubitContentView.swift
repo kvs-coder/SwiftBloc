@@ -25,7 +25,7 @@ struct CubitContentView: View {
                 })
                 Text("Count: \(cubit.state)")
             }
-        }, cubit: CounterCubit())
+        }, base: CounterCubit())
     }
 }
 

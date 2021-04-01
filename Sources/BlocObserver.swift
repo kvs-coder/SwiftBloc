@@ -32,8 +32,8 @@ open class BlocObserver {
      Called when **Bloc** or **Cubit** instance is created.
      - parameter cubit: cubit or bloc.
      */
-    open func onCreate<State>(cubit: Cubit<State>) {
-        logInfo(cubit)
+    open func onCreate<State>(base: BlocBase<State>) {
+        logInfo(base)
     }
     /**
      Called when a new event is added to **Bloc** instance.
@@ -44,12 +44,12 @@ open class BlocObserver {
         logInfo("\(bloc), \(event)")
     }
     /**
-     Called when state changes in **Cubit** instance.
-     - parameter bloc: bloc.
+     Called when state changes in **BlocBase** instance.
+     - parameter base: base.
      - parameter change: a change to a new state.
      */
-    open func onChange<State>(cubit: Cubit<State>, change: Change<State>) {
-        logInfo("\(cubit), \(change)")
+    open func onChange<State>(base: BlocBase<State>, change: Change<State>) {
+        logInfo("\(base), \(change)")
     }
     /**
      Called when state based on the event changes in **Bloc** instance.
@@ -60,18 +60,18 @@ open class BlocObserver {
         logInfo("\(bloc), \(transition)")
     }
     /**
-     Called when error is occured in **Cubit** or **Bloc** instance.
-     - parameter cubit: cubit.
+     Called when error is occured in **BlocBase** or **Bloc** instance.
+     - parameter base: cubit.
      - parameter error: a reported error.
      */
-    open func onError<State>(cubit: Cubit<State>, error: Error) {
-        logError("\(cubit), \(error)")
+    open func onError<State>(base: BlocBase<State>, error: Error) {
+        logError("\(base), \(error)")
     }
     /**
-     Called when **Cubit** or **Bloc** instance is destroyed.
-     - parameter cubit: cubit.
+     Called when **BlocBase** or **Bloc** instance is destroyed.
+     - parameter base: base.
      */
-    open func onClose<State>(cubit: Cubit<State>) {
-        logInfo(cubit)
+    open func onClose<State>(base: BlocBase<State>) {
+        logInfo(base)
     }
 }

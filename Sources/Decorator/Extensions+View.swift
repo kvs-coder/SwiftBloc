@@ -8,11 +8,11 @@
 import SwiftUI
 
 extension View {
-    func listen<C: Cubit<S>, S: Equatable>(
-        cubit: C,
-        action: BlocViewAction<C, S>?
+    func listen<B: BlocBase<S>, S: Equatable>(
+        base: B,
+        action: BlocViewAction<B, S>?
     ) -> some View {
-        action?(cubit)
+        action?(base)
         return self
     }
 }

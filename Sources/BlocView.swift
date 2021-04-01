@@ -12,55 +12,55 @@ import SwiftUI
  - parameter state: current state.
  - returns: content view
  */
-public typealias BlocViewBuilder<C: Cubit<S>, S: Equatable, Content: View> = (_ cubit: C) -> Content
+public typealias BlocViewBuilder<B: BlocBase<S>, S: Equatable, Content: View> = (_ base: B) -> Content
 /**
  BlocViewAction
  - parameter state: current state.
  */
-public typealias BlocViewAction<C: Cubit<S>, S: Equatable> = (_ cubit: C) -> Void
+public typealias BlocViewAction<B: BlocBase<S>, S: Equatable> = (_ base: B) -> Void
 /**
  A general protocol for the **BlocView** class.
  */
 protocol BlocViewProtocol: View {
     associatedtype S where S: Equatable
-    associatedtype C where C: Cubit<S>
+    associatedtype B where B: BlocBase<S>
     associatedtype Content where Content: View
 
-    var cubit: C { get }
+    var base: B { get }
 
-    func build(cubit: C) -> Content
+    func build(base: B) -> Content
 }
 /**
  A wrapper for a **View** conforming view providing BloC instance as **EnvironmentObject**.
  Expects **Cubit** (**Bloc** as well) conforming BloC component with **Equatable** state object.
  */
-public struct BlocView<C: Cubit<S>, S: Equatable, Content: View>: BlocViewProtocol  {
+public struct BlocView<B: BlocBase<S>, S: Equatable, Content: View>: BlocViewProtocol  {
     /**
      A cubit/bloc property which holds the custom buisiness logic
      */
-    @ObservedObject var cubit: C
+    @ObservedObject var base: B
     /**
      Extract the current state from a cubit/bloc
      */
     private var state: S {
-        cubit.state
+        base.state
     }
     /**
      @ViewBuilder callback. Builds views based on the state
      */
-    private let builder: BlocViewBuilder<C, S, Content>
+    private let builder: BlocViewBuilder<B, S, Content>
     /**
      (Optional) Custom action callback. Called everytime when state changes
      */
-    private let action: BlocViewAction<C, S>?
+    private let action: BlocViewAction<B, S>?
     /**
      Required property of View Protocol. Body will set the current cubit/bloc instance as **EnvironmentObject** if the instance
      is wrapped in **ObservedObject** property wrapper in your View.
      */
     public var body: some View {
-        build(cubit: cubit)
-            .listen(cubit: cubit, action: action)
-            .environmentObject(cubit)
+        build(base: base)
+            .listen(base: base, action: action)
+            .environmentObject(base)
     }
     /**
      BlocView constructor
@@ -69,20 +69,20 @@ public struct BlocView<C: Cubit<S>, S: Equatable, Content: View>: BlocViewProtoc
      - parameter cubit: cubit/bloc instance.
      */
     public init(
-        @ViewBuilder builder: @escaping BlocViewBuilder<C, S, Content>,
-                     action: BlocViewAction<C, S>? = nil,
-                     cubit: C
+        @ViewBuilder builder: @escaping BlocViewBuilder<B, S, Content>,
+                     action: BlocViewAction<B, S>? = nil,
+                     base: B
     ) {
         self.builder = builder
         self.action = action
-        self.cubit = cubit
+        self.base = base
     }
     /**
      Builds the view **Content** based on the state
-     - parameter state: current state.
+     - parameter base: the **Bloc** or **Cubit** object.
      - returns: content view
      */
-    func build(cubit: C) -> Content {
-        builder(cubit)
+    func build(base: B) -> Content {
+        builder(base)
     }
 }
