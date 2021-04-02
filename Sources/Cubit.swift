@@ -1,6 +1,6 @@
 //
 //  Cubit.swift
-//  Pods-SwiftBloc_Example
+//  SwiftBloc
 //
 //  Created by Kachalov, Victor on 27.02.21.
 //

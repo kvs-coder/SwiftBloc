@@ -1,8 +1,8 @@
 //
 //  Bloc.swift
-//  Pods-SwiftBloc_Example
+//  SwiftBloc
 //
-//  Created by Kachalov, Victor on 27.02.21.
+//  Created by Kachalov, Victor on 01.04.21.
 //
 
 //TODO:

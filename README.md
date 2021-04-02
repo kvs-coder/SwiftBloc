@@ -36,7 +36,7 @@ ruby bloc_template /MY_PROJECT/MY_CUBIT_FOLDER Counter cubit
 
 ```ruby
 # creates a bloc
-ruby bloc_template /MY_PROJECT/MY_CUBIT_FOLDER Counter bloc
+ruby bloc_template /MY_PROJECT/MY_BLOC_FOLDER Counter bloc
 ```
 
 ### Cubit
