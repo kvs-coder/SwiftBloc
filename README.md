@@ -8,6 +8,8 @@
 Inspired from a really great Flutter package [flutter_bloc](https://pub.dev/packages/flutter_bloc) this SwiftUI library brings the state management with a BloC (Buisiness logic component) approach
 to separate views and buisiness logic. With the help of Apple Library "Combine" the state management is handled with the reactive approach.
 
+Requires iOS 13.0+ and MacOS 10.15+
+
 ## Start
 
 At first you need to decide what approach is more suitable for your app. 
