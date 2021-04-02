@@ -1,3 +1,7 @@
+## [1.0.2] - 02.04.2021.
+
+* Add BlocTest
+
 ## [1.0.1] - 18.03.2021.
 
 * Incapsulating Bloc
