@@ -2,36 +2,6 @@ import XCTest
 import Combine
 @testable import SwiftBloc
 
-final public class BlocTest<S: Equatable, B: Base<S>> {
-    public static func execute(
-        build: () -> B,
-        act: ((B) -> Void)?,
-        wait: TimeInterval? = 0,
-        expect: (() -> Any)?,
-        verify: ((B) -> Void)? = nil
-    ) {
-        var areEqual = false
-        var states = [S]()
-        let bloc = build()
-        let scheduler = ImmediateScheduler.shared
-        let cancellable = bloc.$state
-            .subscribe(on: scheduler)
-            .delay(for: .seconds(wait ?? 0), scheduler: scheduler)
-            .sink(receiveValue: { value in
-                states.append(value)
-            })
-        act?(bloc)
-        if expect != nil {
-            let expected = expect!()
-            areEqual = "\(states)" == "\(expected)"
-            let message = "State received: \(states). \nStates expected: \(expected)"
-            XCTAssert(areEqual, message)
-        }
-        cancellable.cancel()
-        verify?(bloc)
-    }
-}
-
 final class SwiftBlocTests: XCTestCase {
     func testExample() {
         XCTAssert(true)
@@ -45,6 +15,8 @@ final class SwiftBlocTests: XCTestCase {
             [
                 MockCounterState(count: 0)
             ]
+        }, verify: { areEqual, message in
+            XCTAssert(areEqual, message)
         })
     }
     func testCounterBlocIncrement() {
@@ -59,6 +31,8 @@ final class SwiftBlocTests: XCTestCase {
                 MockCounterState(count: 1),
                 MockCounterState(count: 2)
             ]
+        }, verify: { areEqual, message in
+            XCTAssert(areEqual, message)
         })
     }
     func testCounterBlocDecrement() {
@@ -73,10 +47,12 @@ final class SwiftBlocTests: XCTestCase {
                 MockCounterState(count: -1),
                 MockCounterState(count: -2)
             ]
+        }, verify: { areEqual, message in
+            XCTAssert(areEqual, message)
         })
     }
     func testCounterCubitInitial() {
-        BlocTest.execute(description: "CounterCubit", build: {
+        BlocTest.execute(build: {
             MockCounterCubit()
         }, act: { (_) in
             // DO NOTHING
@@ -84,6 +60,8 @@ final class SwiftBlocTests: XCTestCase {
             [
                 0
             ]
+        }, verify: { areEqual, message in
+            XCTAssert(areEqual, message)
         })
     }
     func testCounterCubitIncrement() {
@@ -98,6 +76,8 @@ final class SwiftBlocTests: XCTestCase {
                 1,
                 2
             ]
+        }, verify: { areEqual, message in
+            XCTAssert(areEqual, message)
         })
     }
     func testCounterCubitDecrement() {
@@ -112,6 +92,8 @@ final class SwiftBlocTests: XCTestCase {
                 -1,
                 -2
             ]
+        }, verify: { areEqual, message in
+            XCTAssert(areEqual, message)
         })
     }
 

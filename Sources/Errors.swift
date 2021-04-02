@@ -10,12 +10,12 @@ import Foundation
 /**
  Bloc errors
 */
-enum BlocError: Error {
+public enum BlocError: Error {
     case noEvent
 }
 /**
  Cubit (more abstract) errors
 */
-enum CubitError: Error {
+public enum CubitError: Error {
     case stateNotChanged
 }
