@@ -5,8 +5,6 @@
 //  Created by Kachalov, Victor on 01.04.21.
 //
 
-//TODO:
-// blocTest
 import Combine
 
 /**
