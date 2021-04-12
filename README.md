@@ -235,6 +235,67 @@ struct OperationView: View {
 
 The **Bloc** class is monitoring the changes of the **event** property via **@PublishedSubject** property wrapper. This **bloc** instance is set by default as **@EnvironmentObject** and will be available for all child views if needed.
 
+### BlocTest
+
+You may want to test you Blocs to be sure that the awaited states are actually happening if appropriate events passed in.
+
+**BlocTest.execute** will expect to have four callbacks:
+
+- **build** (create a Bloc instance inside the closure)
+- **act** (provide a sequence of events)
+- **ecpect** (set awaited states)
+- **verify** (handle information about equality of expected and real states)
+
+```swift
+final class SwiftBlocTests: XCTestCase {
+    func testCounterBlocInitial() {
+        BlocTest.execute(build: {
+            MockCounterBloc()
+        }, act: { (_) in
+            // DO NOTHING
+        }, expect: {
+            [
+                MockCounterState(count: 0)
+            ]
+        }, verify: { areEqual, message in
+            XCTAssert(areEqual, message)
+        })
+    }
+    func testCounterBlocIncrement() {
+        BlocTest.execute(build: {
+            MockCounterBloc()
+        }, act: { (bloc) in
+            bloc.add(event: .increment)
+            bloc.add(event: .increment)
+        }, expect: {
+            [
+                MockCounterState(count: 0),
+                MockCounterState(count: 1),
+                MockCounterState(count: 2)
+            ]
+        }, verify: { areEqual, message in
+            XCTAssert(areEqual, message)
+        })
+    }
+    func testCounterBlocDecrement() {
+        BlocTest.execute(build: {
+            MockCounterBloc()
+        }, act: { (bloc) in
+            bloc.add(event: .decrement)
+            bloc.add(event: .decrement)
+        }, wait: 3.0, expect: {
+            [
+                MockCounterState(count: 0),
+                MockCounterState(count: -1),
+                MockCounterState(count: -2)
+            ]
+        }, verify: { areEqual, message in
+            XCTAssert(areEqual, message)
+        })
+    }
+}    
+```
+
 ## Example
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
