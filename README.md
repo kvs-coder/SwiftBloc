@@ -237,7 +237,7 @@ The **Bloc** class is monitoring the changes of the **event** property via **@Pu
 
 ### BlocTest
 
-You may want to test you Blocs to be sure that the awaited states are actually happening if appropriate events passed in.
+You may want to test your Blocs to be sure that the awaited states are actually happening if appropriate events passed in.
 
 **BlocTest.execute** will expect to have four callbacks:
 
