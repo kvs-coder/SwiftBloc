@@ -9,7 +9,27 @@
 import SwiftUI
 
 struct SuccessView: View {
+    @State var isAlertPresented = false
+
     var body: some View {
-        Text("I am an amazing SwiftUI Text")
+        VStack(
+            spacing: 20.0,
+            content: {
+                Text("I am an amazing SwiftUI Text")
+                Button("Call alert") {
+                    isAlertPresented = true
+                }
+            }
+        )
+        .alert(
+            isPresented: $isAlertPresented,
+            content: {
+                Alert(
+                    title: Text("Perfect"),
+                    message: Text("I was called from SwiftUI content in Hosted ViewController"),
+                    dismissButton: .cancel()
+                )
+            }
+        )
     }
 }

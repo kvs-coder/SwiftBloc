@@ -60,7 +60,13 @@
                         <viewLayoutGuide key="safeArea" id="Sgk-xH-ovG"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <navigationItem key="navigationItem" id="Hnj-8G-fhW"/>
+                    <navigationItem key="navigationItem" id="Hnj-8G-fhW">
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="exclamationmark" catalog="system" id="5co-QA-lR1">
+                            <connections>
+                                <action selector="markTapped:" destination="Qyc-F2-ef0" id="Zjm-Z4-9Bz"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kee-6a-Jyv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -86,6 +92,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="exclamationmark" catalog="system" width="46" height="128"/>
         <image name="paperplane" catalog="system" width="128" height="118"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
