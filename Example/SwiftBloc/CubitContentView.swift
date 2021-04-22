@@ -11,21 +11,24 @@ import SwiftUI
 
 struct CubitContentView: View {
     var body: some View {
-        BlocView(builder: { (cubit)  in
-            VStack {
-                Button(action: {
-                    cubit.increment()
-                }, label: {
-                    Text("Increment")
-                })
-                Button(action: {
-                    cubit.decrement()
-                }, label: {
-                    Text("Decrement")
-                })
-                Text("Count: \(cubit.state)")
-            }
-        }, base: CounterCubit())
+        NavigationView {
+            BlocView(builder: { (cubit)  in
+                VStack {
+                    Button(action: {
+                        cubit.increment()
+                    }, label: {
+                        Text("Increment")
+                    })
+                    Button(action: {
+                        cubit.decrement()
+                    }, label: {
+                        Text("Decrement")
+                    })
+                    Text("Count: \(cubit.state)")
+                }
+            }, base: CounterCubit())
+            .navigationBarTitle(Text("Cubit"), displayMode: .inline)
+        }
     }
 }
 

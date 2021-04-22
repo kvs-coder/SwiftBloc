@@ -11,21 +11,22 @@ import SwiftBloc
 
 struct MainView: View {
     var body: some View {
-        NavigationView {
-            TabView {
-                CubitContentView()
+        TabView {
+            CubitContentView()
                 .tabItem {
-                    Text("Cubit")
                     Image(systemName: "arrow.counterclockwise")
+                    Text("Cubit")
                 }
-                .navigationBarTitle("Cubit")
-                BlocContentView()
+            BlocContentView()
                 .tabItem {
-                    Text("Bloc")
                     Image(systemName: "cube")
+                    Text("Bloc")
                 }
-                .navigationBarTitle("Bloc")
-            }
+            WebView()
+                .tabItem {
+                    Image(systemName: "message")
+                    Text("Web")
+                }
         }
     }
 }

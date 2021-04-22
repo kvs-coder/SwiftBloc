@@ -13,30 +13,33 @@ struct BlocContentView: View {
     @State var isAlertCalled = false
 
     var body: some View {
-        BlocView(builder: { (bloc) in
-            VStack {
-                if bloc.state.count > 5 {
-                    LimitView()
-                } else {
-                    OperationView()
-                }
-            }
-            .alert(isPresented: self.$isAlertCalled) {
-                Alert(
-                    title: Text("Hi"),
-                    message: Text("Message"),
-                    dismissButton: .cancel {
-                        bloc.add(event: .increment)
+        NavigationView {
+            BlocView(builder: { (bloc) in
+                VStack {
+                    if bloc.state.count > 5 {
+                        LimitView()
+                    } else {
+                        OperationView()
                     }
-                )
-            }
-        }, action: { (bloc) in
-            if bloc.state.count < -1 {
-                DispatchQueue.main.async {
-                    self.isAlertCalled = true
                 }
-            }
-        }, base: CounterBloc())
+                .alert(isPresented: self.$isAlertCalled) {
+                    Alert(
+                        title: Text("Hi"),
+                        message: Text("Message"),
+                        dismissButton: .cancel {
+                            bloc.add(event: .increment)
+                        }
+                    )
+                }
+            }, action: { (bloc) in
+                if bloc.state.count < -1 {
+                    DispatchQueue.main.async {
+                        self.isAlertCalled = true
+                    }
+                }
+            }, base: CounterBloc())
+            .navigationBarTitle(Text("Bloc"), displayMode: .inline)
+        }
     }
 }
 
