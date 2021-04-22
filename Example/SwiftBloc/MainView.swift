@@ -27,6 +27,11 @@ struct MainView: View {
                     Image(systemName: "message")
                     Text("Web")
                 }
+            FunnyView()
+                .tabItem {
+                    Image(systemName: "flame")
+                    Text("Funny")
+                }
         }
     }
 }
