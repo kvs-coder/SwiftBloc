@@ -22,16 +22,6 @@ struct MainView: View {
                     Image(systemName: "cube")
                     Text("Bloc")
                 }
-            WebView()
-                .tabItem {
-                    Image(systemName: "message")
-                    Text("Web")
-                }
-            FunnyView()
-                .tabItem {
-                    Image(systemName: "flame")
-                    Text("Funny")
-                }
         }
     }
 }
