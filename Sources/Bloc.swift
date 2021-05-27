@@ -44,14 +44,14 @@ open class Bloc<Event, State>: Base<State> where State: Equatable, Event: Equata
         self.event = event
     }
     /**
-     The mapping function which is responsable for creating states out of event.
+     The mapping function which is responsible for creating states out of event.
      The idea is to listen for the incoming event and based on that create an appropriate new state of the view
      - parameter event: incoming event.
      - returns: new state instance
-     - warning: The function should be overriden in a child class
+     - warning: The function should be overridden in a child class
      
      # Notes: #
-     1. If not overriden, will fail with **preconditionFailure**
+     1. If not overridden, will fail with **preconditionFailure**
      */
     open func mapEventToState(event: Event) -> State {
         preconditionFailure("This method must be overridden")

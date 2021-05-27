@@ -50,7 +50,7 @@ public struct BlocView<B: Base<S>, S: Equatable, Content: View>: BlocViewProtoco
      */
     private let builder: BlocViewBuilder<B, S, Content>
     /**
-     (Optional) Custom action callback. Called everytime when state changes
+     (Optional) Custom action callback. Called every time when state changes
      */
     private let action: BlocViewAction<B, S>?
     /**
