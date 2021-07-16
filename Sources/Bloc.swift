@@ -12,7 +12,7 @@ import Combine
  */
 open class Bloc<Event, State>: Base<State> where State: Equatable, Event: Equatable {
     /**
-     Whenever a new event happens, the instance of the **Bloc** wrapped in **ObservedObject**  in your **View** structure will recieve
+     Whenever a new event happens, the instance of the **Bloc** wrapped in **ObservedObject**  in your **View** structure will receive
      a new value of event..
      */
     @Published internal(set) public var event: Event?
@@ -22,10 +22,10 @@ open class Bloc<Event, State>: Base<State> where State: Equatable, Event: Equata
     private var cancellables = Set<AnyCancellable>()
     /**
      Bloc constructor
-     - parameter intialState: initial state.
+     - parameter initialState: initial state.
      */
-    public init(intialState: State) {
-        super.init(state: intialState)
+    public init(initialState: State) {
+        super.init(state: initialState)
         bindEventsToStates()
     }
     /**

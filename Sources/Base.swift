@@ -17,11 +17,11 @@ open class Base<State>: ObservableObject where State: Equatable {
      */
     @Published internal(set) public var state: State
     /**
-     Additional variable to make sure that previosly the cubit was not emmiting any new states
+     Additional variable to make sure that previously the cubit was not emitting any new states
      */
     var emitted = false
     /**
-     Will return a shared instace of **BlocObserver** which will notify about changes and transitions of states
+     Will return a shared instance of **BlocObserver** which will notify about changes and transitions of states
      You may create a custom observer of **BlocObserver**
      */
     var observer: BlocObserver {

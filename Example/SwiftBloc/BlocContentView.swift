@@ -10,8 +10,6 @@ import SwiftUI
 import SwiftBloc
 
 struct BlocContentView: View {
-    @State var isAlertCalled = false
-
     var body: some View {
         NavigationView {
             BlocView(builder: { (bloc) in
@@ -22,19 +20,17 @@ struct BlocContentView: View {
                         OperationView()
                     }
                 }
-                .alert(isPresented: self.$isAlertCalled) {
+                .alert(isPresented: bloc.shouldShowAlertBinding) {
                     Alert(
                         title: Text("Hi"),
                         message: Text("Message"),
-                        dismissButton: .cancel {
-                            bloc.add(event: .increment)
-                        }
+                        dismissButton: .cancel {}
                     )
                 }
             }, action: { (bloc) in
-                if bloc.state.count < -1 {
-                    DispatchQueue.main.async {
-                        self.isAlertCalled = true
+                if bloc.state.count < -5 {
+                    for _ in 0..<6 {
+                        bloc.add(event: .increment)
                     }
                 }
             }, base: CounterBloc())
