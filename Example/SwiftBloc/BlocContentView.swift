@@ -13,20 +13,14 @@ struct BlocContentView: View {
     var body: some View {
         NavigationView {
             BlocView(builder: { (bloc) in
-                VStack {
-                    if bloc.state.count > 5 {
-                        LimitView()
-                    } else {
-                        OperationView()
+                CounterView()
+                    .alert(isPresented: bloc.shouldShowAlertBinding) {
+                        Alert(
+                            title: Text("Hi"),
+                            message: Text("Message"),
+                            dismissButton: .cancel {}
+                        )
                     }
-                }
-                .alert(isPresented: bloc.shouldShowAlertBinding) {
-                    Alert(
-                        title: Text("Hi"),
-                        message: Text("Message"),
-                        dismissButton: .cancel {}
-                    )
-                }
             }, action: { (bloc) in
                 if bloc.state.count < -5 {
                     for _ in 0..<6 {
@@ -39,6 +33,18 @@ struct BlocContentView: View {
     }
 }
 
+struct CounterView: View {
+    @EnvironmentObject var bloc: CounterBloc
+
+    var body: some View {
+        if bloc.state.count > 5 {
+            LimitView()
+        } else {
+            OperationView()
+        }
+    }
+}
+
 struct LimitView: View {
     @EnvironmentObject var bloc: CounterBloc
 
@@ -46,12 +52,9 @@ struct LimitView: View {
         VStack {
             Text("Hooora")
             Button(action: {
-                self.bloc.add(event: .decrement)
-                self.bloc.add(event: .decrement)
-                self.bloc.add(event: .decrement)
-                self.bloc.add(event: .decrement)
-                self.bloc.add(event: .decrement)
-                self.bloc.add(event: .decrement)
+                for _ in 0..<6 {
+                    bloc.add(event: .decrement)
+                }
             }, label: {
                 Text("Reset")
             })
@@ -65,12 +68,12 @@ struct OperationView: View {
     var body: some View {
         VStack {
             Button(action: {
-                self.bloc.add(event: .increment)
+                bloc.add(event: .increment)
             }, label: {
                 Text("Send Increment event")
             })
             Button(action: {
-                self.bloc.add(event: .decrement)
+                bloc.add(event: .decrement)
             }, label: {
                 Text("Send Decrement event")
             })
