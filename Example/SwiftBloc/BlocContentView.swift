@@ -18,15 +18,15 @@ struct BlocContentView: View {
                         Alert(
                             title: Text("Hi"),
                             message: Text("Message"),
-                            dismissButton: .cancel {}
+                            dismissButton: .cancel {
+                                for _ in 0..<6 {
+                                    bloc.add(event: .increment)
+                                }
+                            }
                         )
                     }
             }, action: { (bloc) in
-                if bloc.state.count < -5 {
-                    for _ in 0..<6 {
-                        bloc.add(event: .increment)
-                    }
-                }
+                print(bloc.state.count)
             }, base: CounterBloc())
             .navigationBarTitle(Text("Bloc"), displayMode: .inline)
         }

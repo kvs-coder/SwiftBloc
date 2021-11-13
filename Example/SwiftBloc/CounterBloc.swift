@@ -16,28 +16,27 @@ enum CounterEvent {
 
 struct CounterState: Equatable {
     let count: Int
-    let shouldShowAlert: Bool
 
-    func copyWith(count: Int?, shouldShowAlert: Bool?) -> CounterState {
-        CounterState(count: count ?? self.count, shouldShowAlert: shouldShowAlert ?? self.shouldShowAlert)
+    func copyWith(count: Int?) -> CounterState {
+        CounterState(count: count ?? self.count)
     }
 }
 
 class CounterBloc: Bloc<CounterEvent, CounterState> {
     var shouldShowAlertBinding: Binding<Bool> {
-        Binding.constant(state.shouldShowAlert)
+        Binding.constant(state.count < -6)
     }
 
     init() {
-        super.init(initialState: CounterState(count: 0, shouldShowAlert: false))
+        super.init(initialState: CounterState(count: 0))
     }
 
     override func mapEventToState(event: CounterEvent) -> CounterState {
         switch event {
         case .increment:
-            return state.copyWith(count: state.count + 1, shouldShowAlert: true)
+            return state.copyWith(count: state.count + 1)
         case .decrement:
-            return state.copyWith(count: state.count - 1, shouldShowAlert: false)
+            return state.copyWith(count: state.count - 1)
         }
     }
 }
