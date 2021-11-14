@@ -16,7 +16,6 @@ Pod::Spec.new do |s|
   s.license               = { :type => 'MIT', :file => 'LICENSE' }
   s.author                = { 'VictorKachalov' => 'victorkachalov@gmail.com' }
   s.source                = { :git => 'https://github.com/VictorKachalov/SwiftBloc.git', :tag => s.version.to_s }
-  s.social_media_url      = 'https://www.facebook.com/profile.php?id=1700091944'
   s.platform              = :ios, '13.0'
   s.ios.deployment_target = '13.0'
   s.source_files          = 'Sources/**/*'
