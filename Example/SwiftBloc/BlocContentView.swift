@@ -13,8 +13,9 @@ struct BlocContentView: View {
     var body: some View {
         NavigationView {
             BlocView(builder: { (bloc) in
+                let isPresented = Binding.constant(bloc.state.count < -6)
                 CounterView()
-                    .alert(isPresented: bloc.shouldShowAlertBinding) {
+                    .alert(isPresented: isPresented) {
                         Alert(
                             title: Text("Hi"),
                             message: Text("Message"),

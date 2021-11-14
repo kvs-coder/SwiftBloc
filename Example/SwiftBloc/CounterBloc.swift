@@ -23,10 +23,6 @@ struct CounterState: Equatable {
 }
 
 class CounterBloc: Bloc<CounterEvent, CounterState> {
-    var shouldShowAlertBinding: Binding<Bool> {
-        Binding.constant(state.count < -6)
-    }
-
     init() {
         super.init(initialState: CounterState(count: 0))
     }
