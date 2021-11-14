@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name                  = 'SwiftBloc'
-  s.version               = '1.0.2'
+  s.version               = '1.0.3'
   s.summary               = 'SwiftBloc. A state management library'
   s.swift_versions        = '5.3'
   s.description           = 'Separates presentation from business logic. Ideal for testability and reusability.'
