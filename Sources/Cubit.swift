@@ -8,7 +8,7 @@
 import Combine
 
 /**
- A state managing class not depending on incoming events.
+ A state managing class not dependent on incoming events.
  */
 open class Cubit<State>: Base<State> where State: Equatable {
     /**

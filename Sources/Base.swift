@@ -12,7 +12,7 @@ import Combine
  */
 open class Base<State>: ObservableObject where State: Equatable {
     /**
-     Whenever a state will be changed, the instance of the **Cubit** wrapped in **ObservedObject** in your **View** structure will recieve
+     Whenever a state will be changed, the instance of the **Cubit** wrapped in **ObservedObject** in your **View** structure will receive
      a new value of state. Based on this you can set the strict dependency of how to build your views.
      */
     @Published internal(set) public var state: State
