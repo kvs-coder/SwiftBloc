@@ -16,7 +16,7 @@ final public class BlocTest<S: Equatable, B: Base<S>> {
     /// - Parameters:
     ///   - build: the **Bloc** object closure
     ///   - act: all potentially happening events should be described here
-    ///   - wait: a delay before listening to state changing
+    ///   - wait: a delay before listening to state change
     ///   - expect: all expected states based on incoming events
     ///   - verify: verify bloc for matching expectations of incoming events successfully mapped to expected states
     public static func execute(

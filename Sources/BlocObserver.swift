@@ -9,7 +9,7 @@ import Foundation
 
 /**
  An observer to observe emitted states or added events.
- You may creater your own singletone observer class and set a new value for a **shared** property
+ You may create your own singleton observer class and set a new value for a **shared** property
  */
 open class BlocObserver {
     /**
@@ -60,7 +60,7 @@ open class BlocObserver {
         logInfo("\(bloc), \(transition)")
     }
     /**
-     Called when error is occured in **Cubit** or **Bloc** instance.
+     Called if an error occurs in **Cubit** or **Bloc** instance.
      - parameter base: cubit.
      - parameter error: a reported error.
      */

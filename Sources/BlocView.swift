@@ -36,7 +36,7 @@ protocol BlocViewProtocol: View {
  */
 public struct BlocView<B: Base<S>, S: Equatable, Content: View>: BlocViewProtocol  {
     /**
-     A cubit/bloc property which holds the custom buisiness logic
+     A cubit/bloc property which holds the custom business logic
      */
     @ObservedObject var base: B
     /**
@@ -46,16 +46,16 @@ public struct BlocView<B: Base<S>, S: Equatable, Content: View>: BlocViewProtoco
         base.state
     }
     /**
-     @ViewBuilder callback. Builds views based on the state
+     @ViewBuilder callback. Builds views based on the state.
      */
     private let builder: BlocViewBuilder<B, S, Content>
     /**
-     (Optional) Custom action callback. Called every time when state changes
+     (Optional) Custom action callback. Called every time the state is changed.
      */
     private let action: BlocViewAction<B, S>?
     /**
      Required property of View Protocol. Body will set the current cubit/bloc instance as **EnvironmentObject** if the instance
-     is wrapped in **ObservedObject** property wrapper in your View.
+     is wrapped in an **ObservedObject** property wrapper in your View.
      */
     public var body: some View {
         build(base: base)

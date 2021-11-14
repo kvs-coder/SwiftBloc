@@ -23,7 +23,7 @@ struct MockCounterState: Equatable {
 
 class MockCounterBloc: Bloc<MockCounterEvent, MockCounterState> {
     init() {
-        super.init(intialState: MockCounterState(count: 0))
+        super.init(initialState: MockCounterState(count: 0))
     }
 
     override func mapEventToState(event: MockCounterEvent) -> MockCounterState {
