@@ -311,7 +311,7 @@ The library supports iOS 13 & above.
 
 ### Cocoapods
 
-HealthKitReporter is available through [CocoaPods](https://cocoapods.org). To install
+SwiftBloc is available through [CocoaPods](https://cocoapods.org). To install
 it, simply add the following line to your Podfile:
 
 ```ruby
