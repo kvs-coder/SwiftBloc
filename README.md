@@ -246,7 +246,7 @@ You may want to test your Blocs to be sure that the awaited states are actually 
 
 - **build** (create a Bloc instance inside the closure)
 - **act** (provide a sequence of events)
-- **ecpect** (set awaited states)
+- **expect** (set awaited states)
 - **verify** (handle information about equality of expected and real states)
 
 ```swift
